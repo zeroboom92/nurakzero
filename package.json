@@ -1,15 +1,17 @@
 {
-  "name": "nuranzero",
+  "name": "nurakzero",
   "version": "0.1.0",
   "description": "학교 감사 점검 위젯 - 이번 달 점검사항을 바탕화면 위젯으로 관리",
   "main": "./out/main/index.js",
-  "author": "nuranzero",
+  "author": "nurakzero",
   "license": "MIT",
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "dist": "electron-vite build && electron-builder --win",
+    "dist:dir": "electron-vite build && electron-builder --dir"
   },
   "dependencies": {
     "date-fns": "^3.6.0",
@@ -21,10 +23,37 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "electron": "^31.3.1",
+    "electron-builder": "^24.13.3",
     "electron-vite": "^2.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"
+  },
+  "build": {
+    "appId": "com.zeroboom92.nurakzero",
+    "productName": "nurakzero",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "누락제로"
+    }
   }
 }

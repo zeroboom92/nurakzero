@@ -31,7 +31,7 @@ export class Store {
   private filePath: string
   private cache: DbShape
 
-  constructor(fileName = 'nuranzero-data.json') {
+  constructor(fileName = 'nurakzero-data.json') {
     const dir = app.getPath('userData')
     if (!existsSync(dir)) mkdirSync(dir, { recursive: true })
     this.filePath = join(dir, fileName)

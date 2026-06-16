@@ -800,6 +800,8 @@
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   padding: 22px;
+  /* 내용이 길면 창(최대 800)에 맞춰 카드 높이를 제한하고 내부에서 스크롤 */
+  max-height: 772px;
 }
 .ob-wincontrols {
   position: absolute;
@@ -831,6 +833,8 @@
 .ob-step {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 .ob-step--center {
   align-items: center;
@@ -902,9 +906,24 @@
   margin-bottom: 12px;
 }
 .ob-work-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  -webkit-app-region: no-drag; /* 스크롤이 창 끌기에 먹히지 않도록 */
+}
+.ob-work-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.ob-work-group__title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-muted);
+  padding: 4px 2px 0;
 }
 .ob-work {
   display: flex;
@@ -925,8 +944,7 @@
   border-color: var(--accent-coral);
 }
 .ob-work--soon {
-  opacity: 0.55;
-  cursor: default;
+  background: var(--card-bg-soft);
 }
 .ob-work__box {
   width: 20px;
@@ -944,24 +962,95 @@
   background: var(--accent-coral);
   border-color: var(--accent-coral);
 }
-.ob-work__title {
+.ob-work__main {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 7px;
+}
+.ob-work__title {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-charcoal);
 }
+/* 감사코드 칩 */
+.ob-work__code {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--card-bg-soft);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+/* 대상 학교급 타원 태그 (유 초 중 고 특) */
+.ob-work__levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.ob-level {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--accent-lavender-soft);
+  color: var(--text-muted);
+}
+/* 학교급별 색상 */
+.ob-level[data-lv='유'] {
+  background: #fde3e0;
+  color: #d2796b;
+}
+.ob-level[data-lv='초'] {
+  background: #fdeccf;
+  color: #c9924a;
+}
+.ob-level[data-lv='중'] {
+  background: #d9f0e3;
+  color: #4ba07e;
+}
+.ob-level[data-lv='고'] {
+  background: #dbe9f8;
+  color: #5a8cc4;
+}
+.ob-level[data-lv='특'] {
+  background: #ece1f7;
+  color: #8f76c6;
+}
+.ob-work__badge,
 .ob-work__soon {
   font-size: 11px;
   color: var(--text-muted);
   background: var(--card-bg-soft);
   padding: 2px 8px;
   border-radius: 999px;
+  white-space: nowrap;
+}
+.ob-work__badge {
+  color: var(--accent-coral);
+  background: var(--accent-coral-soft);
+}
+.ob-template-notice {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-lavender-soft);
+  color: var(--text-charcoal);
+  font-size: 12px;
+  line-height: 1.5;
 }
 .ob-empty {
   text-align: center;
   color: var(--text-muted);
   padding: 24px;
   font-size: 13px;
+}
+.ob-empty--panel {
+  background: var(--card-bg-soft);
+  border-radius: var(--radius-sm);
 }
 .ob-actions {
   display: flex;
@@ -981,6 +1070,12 @@
   display: flex;
   gap: 10px;
   flex-shrink: 0;
+}
+.ob-preview {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-app-region: no-drag;
 }
 .ob-preview__work {
   margin-bottom: 12px;

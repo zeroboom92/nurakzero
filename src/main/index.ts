@@ -237,7 +237,8 @@ ipcMain.handle('window:setOnboardingHeight', (_e, height: number) => {
   if (!mainWindow) return
   const b = mainWindow.getBounds()
   const work = screen.getDisplayMatching(b).workArea
-  const h = Math.max(300, Math.min(Math.round(height), work.height - 48))
+  // 최대 800px로 제한하고, 더 긴 내용은 카드 안에서 스크롤되게 한다.
+  const h = Math.max(300, Math.min(Math.round(height), 800, work.height - 48))
   const y = Math.max(work.y, Math.min(b.y, work.y + work.height - h))
   mainWindow.setBounds({ x: b.x, y, width: ONBOARDING_SIZE.width, height: h })
 })

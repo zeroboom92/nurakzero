@@ -1,33 +1,49 @@
 import { create } from 'zustand'
-import type { Category, UserTask, UserProfile } from '@/types'
-import { WORK_TEMPLATES, type WorkTemplate } from '@/data/workTemplates'
+import type { Category, Priority, UserTask, UserProfile } from '@/types'
+import { createWorkInstanceFromTemplate } from '@/services/templateService'
+import type { DetailedTemplate, DetailedTemplateTask, TemplateIndexItem } from '@/types/template'
 import { nowIso } from '@/utils/dateUtils'
 
 function genId(prefix = 'task'): string {
   return `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
 }
 
-/** 선택한 업무(Category)를 만든다. Category.id = WorkTemplate.id. */
-function buildCategory(work: WorkTemplate): Category {
+/** 선택한 표준 업무(Category)를 만든다. Category.id = templateId. */
+function buildCategory(item: TemplateIndexItem): Category {
   const ts = nowIso()
-  return { id: work.id, name: work.title, description: work.category, createdAt: ts, updatedAt: ts }
+  return {
+    id: item.templateId,
+    name: item.displayTitle,
+    description: item.category,
+    createdAt: ts,
+    updatedAt: ts
+  }
 }
 
-/** 업무 템플릿 항목들로부터 사용자 점검 항목을 생성한다. */
-function buildTasksForWork(work: WorkTemplate): UserTask[] {
+function taskEvidenceMemo(task: DetailedTemplateTask): string {
+  return task.evidence.join('\n')
+}
+
+function normalizePriority(priority: DetailedTemplateTask['priority']): Priority {
+  if (priority === 'high' || priority === 'medium' || priority === 'low') return priority
+  return 'medium'
+}
+
+/** 세부 템플릿 task 배열로부터 사용자 점검 항목 인스턴스를 생성한다. */
+function buildTasksForTemplate(template: DetailedTemplate): UserTask[] {
   const ts = nowIso()
-  return work.items.map((item, idx) => ({
+  return template.tasks.map((task, idx) => ({
     id: genId(),
-    templateId: work.id,
-    categoryId: work.id,
-    title: item.title,
-    description: item.description,
-    month: item.defaultMonth,
-    day: null,
-    periodType: item.periodType,
-    priority: item.priority,
+    templateId: task.templateTaskId,
+    categoryId: template.templateId,
+    title: task.title,
+    description: task.description,
+    month: task.recommendedMonth,
+    day: task.recommendedDay ?? null,
+    periodType: task.recommendedMonth == null ? 'always' : 'monthly',
+    priority: normalizePriority(task.priority),
     status: 'pending',
-    evidenceMemo: item.evidence,
+    evidenceMemo: taskEvidenceMemo(task),
     note: '',
     completedAt: null,
     pinnedToWidget: false,
@@ -113,10 +129,12 @@ export const useTaskStore = create<TaskState>((set, get) => ({
 
   // 온보딩 완료: 선택한(사용 가능) 업무로 카테고리/점검 항목을 생성하고 저장한다.
   completeOnboarding: (profile, workIds) => {
-    const selected = WORK_TEMPLATES.filter((w) => workIds.includes(w.id) && w.available)
-    const categories = selected.map(buildCategory)
-    const tasks = selected.flatMap(buildTasksForWork)
-    const selectedCategory = selected[0]?.id ?? ''
+    const selected = workIds
+      .map((id) => createWorkInstanceFromTemplate(id))
+      .filter((result) => result.ok && result.item && result.detail)
+    const categories = selected.map((result) => buildCategory(result.item as TemplateIndexItem))
+    const tasks = selected.flatMap((result) => buildTasksForTemplate(result.detail as DetailedTemplate))
+    const selectedCategory = selected[0]?.item?.templateId ?? ''
     set({ categories, tasks, selectedCategory, onboarded: true, loaded: true })
     window.api.saveDb({
       categories,

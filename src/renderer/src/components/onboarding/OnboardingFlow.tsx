@@ -46,8 +46,13 @@ export function OnboardingFlow(): JSX.Element {
   useEffect(() => {
     const el = cardRef.current
     if (!el) return
+    let last = 0
     const apply = (): void => {
-      window.api.setOnboardingHeight(el.offsetHeight + 28)
+      const h = el.offsetHeight + 28
+      // 미세한 변동(스크롤바 출현 등)으로 창이 떨리며 스크롤을 방해하지 않도록 임계값
+      if (Math.abs(h - last) < 3) return
+      last = h
+      window.api.setOnboardingHeight(h)
     }
     apply()
     const ro = new ResizeObserver(apply)
@@ -99,6 +104,7 @@ export function OnboardingFlow(): JSX.Element {
         )}
         {step === 2 && (
           <StepWorkSelect
+            profile={profile}
             selectedWorkIds={selectedWorkIds}
             onChange={setSelectedWorkIds}
             onBack={() => setStep(1)}
