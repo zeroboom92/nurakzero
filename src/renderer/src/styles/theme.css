@@ -1,0 +1,33 @@
+:root {
+  /* 배경 / 카드 */
+  --bg-cream: #faf4ea;
+  --bg-ivory: #fffdf8;
+  --card-bg: #ffffff;
+  --card-bg-soft: #fbf6ee;
+
+  /* 포인트 컬러 (파스텔) */
+  --accent-coral: #f4a78c;
+  --accent-coral-soft: #fce6dd;
+  --accent-apricot: #f6c89a;
+  --accent-lavender: #c9b8e8;
+  --accent-lavender-soft: #ece4f7;
+  --accent-mint: #a9d6c4;
+
+  /* 텍스트 */
+  --text-charcoal: #4a4453;
+  --text-muted: #9a93a6;
+  --text-faint: #c4bdce;
+
+  /* 상태 */
+  --done-gray: #c9c4d1;
+  --delay-red: #e89a9a;
+  --delay-red-bg: #fdecec;
+
+  /* 형태 */
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --shadow-soft: 0 10px 30px rgba(120, 100, 90, 0.12);
+  --shadow-card: 0 6px 18px rgba(120, 100, 90, 0.10);
+  --border-thin: 1px solid rgba(150, 130, 140, 0.12);
+}
