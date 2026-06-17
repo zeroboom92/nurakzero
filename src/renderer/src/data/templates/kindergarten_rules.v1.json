@@ -1,0 +1,133 @@
+{
+  "templateId": "kindergarten_rules",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "유치원 규칙",
+  "displayTitle": "유치원규칙",
+  "description": "유치원규칙 제·개정 절차와 필수 기재사항, 공표를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "1",
+    "areaName": "유치원 학사관리",
+    "itemCode": "1-1",
+    "itemName": "유치원 규칙"
+  },
+  "schoolLevels": ["유"],
+  "aliases": ["유치원규칙", "유치원 규칙", "유치원 학칙", "유치원 운영규정"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "1-1 유치원 규칙",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 114·118의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "amendment", "title": "유치원규칙 제·개정 절차", "sourceTables": [114, 118] },
+    { "id": "required_items", "title": "유치원규칙 필수 기재사항", "sourceTables": [114] },
+    { "id": "disclosure", "title": "유치원규칙 공표", "sourceTables": [114] }
+  ],
+  "legalReferences": [
+    "① 유아교육법 제10조",
+    "② 유아교육법 시행령 제10조",
+    "③ 유아교육법 제19조의4",
+    "④ 교육관련기관의 정보공개에 관한 특례법 제5조의2"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "krl_001",
+      "sourceAuditItemId": "amendment",
+      "title": "유치원규칙 제·개정 절차 준수",
+      "shortTitle": "제·개정 절차",
+      "description": "유치원규칙 제·개정 시 유치원운영위원회 심의(자문)를 거쳤는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "유치원규칙 제·개정 시 유치원운영위원회 심의(자문)를 거쳤는가?",
+        "관련 회의록을 보관하고 있는가?"
+      ],
+      "evidence": ["유치원규칙", "유치원운영위원회 회의록", "관련 내부결재 공문"],
+      "completionCriteria": "제·개정 절차와 운영위원회 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 114·118: 유치원규칙 제·개정 절차의 적정 - 유치원운영위원회 심의(자문)",
+      "monthReason": "학기 초 유치원규칙을 정비·개정하는 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "krl_002",
+      "sourceAuditItemId": "required_items",
+      "title": "학사 관련 필수 기재사항 점검",
+      "shortTitle": "학사 기재사항",
+      "description": "유치원규칙에 교육연한·학기·휴업일, 학급편제·정원, 교육 내용, 수업일수·수업 운영 방법이 기재되어 있는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "교육연한·학기 및 휴업일이 기재되어 있는가?",
+        "학급편제 및 정원이 기재되어 있는가?",
+        "교육 내용, 수업일수 및 수업 운영 방법이 기재되어 있는가?"
+      ],
+      "evidence": ["유치원규칙", "관련 내부결재 공문"],
+      "completionCriteria": "학사 관련 필수 기재사항이 모두 포함되어 있는지 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 114: 유치원규칙 필수 기재 - 교육연한·학기·휴업일, 학급편제·정원, 교육 내용, 수업일수·수업 운영 방법",
+      "monthReason": "규칙 정비 시점에 기재사항 누락 여부를 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "krl_003",
+      "sourceAuditItemId": "required_items",
+      "title": "학적·비용 관련 기재사항 점검",
+      "shortTitle": "학적·비용 기재",
+      "description": "유치원규칙에 입학·재입학·편입학·전학·전출·휴학·퇴학·수료·졸업 및 수업료·입학금 등 비용 사항이 기재되어 있는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "입학·재입학·편입학·전학·전출·휴학·퇴학·수료·졸업 사항이 기재되어 있는가?",
+        "수업료·입학금 등 비용 사항이 기재되어 있는가?"
+      ],
+      "evidence": ["유치원규칙", "관련 내부결재 공문"],
+      "completionCriteria": "학적·비용 관련 기재사항이 포함되어 있는지 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 114: 유치원규칙 필수 기재 - 입학~졸업 학적 사항, 수업료·입학금 등",
+      "monthReason": "학사 기재사항 점검과 함께 4월에 확인 권장"
+    },
+    {
+      "templateTaskId": "krl_004",
+      "sourceAuditItemId": "disclosure",
+      "title": "유치원규칙 공표 및 현행화",
+      "shortTitle": "규칙 공표",
+      "description": "제·개정된 유치원규칙을 공표하고 최신 상태로 현행화하는지 확인한다.",
+      "taskType": "공개",
+      "cycle": "개정 시 및 연 1회",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "low",
+      "riskLevel": "하",
+      "isCore": false,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "제·개정된 유치원규칙을 공표했는가?",
+        "최신 유치원규칙으로 현행화되어 있는가?"
+      ],
+      "evidence": ["유치원규칙(현행본)", "공표 관련 자료"],
+      "completionCriteria": "공표 자료와 현행 유치원규칙을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 114: 유치원규칙 공표 여부",
+      "monthReason": "하반기 시작 시점에 현행화 상태를 점검하기 위해 9월 권장"
+    }
+  ]
+}

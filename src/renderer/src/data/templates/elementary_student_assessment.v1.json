@@ -1,0 +1,318 @@
+{
+  "templateId": "elementary_student_assessment",
+  "version": "1.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "초등 학생평가",
+  "displayTitle": "초등 학생평가",
+  "description": "초등 학생평가 감사점검 항목을 원본 매뉴얼의 세부 점검내용 단위로 옮겨, 학업성적관리위원회·학업성적관리규정·평가계획·공개·선행출제 예방을 누락 없이 점검한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "3",
+    "areaName": "교육과정·평가",
+    "itemCode": "3-2-1",
+    "itemName": "초등 학생평가"
+  },
+  "schoolLevels": [
+    "초"
+  ],
+  "aliases": [
+    "학생평가",
+    "초등 평가",
+    "평가계획",
+    "수행평가",
+    "성취기준",
+    "평가 결과",
+    "학업성적관리",
+    "학업성적관리위원회",
+    "학업성적관리규정"
+  ],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "3-2-1 초등 학생평가",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 HWPX 표 185, 186, 188, 189를 대조해 작성했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    {
+      "id": "elementary_assessment_committee_organization",
+      "title": "학업성적관리위원회 구성",
+      "sourceTables": [186]
+    },
+    {
+      "id": "elementary_assessment_regulation_revision",
+      "title": "학업성적관리규정 제·개정의 적정 여부",
+      "sourceTables": [186, 189]
+    },
+    {
+      "id": "elementary_assessment_regulation_training",
+      "title": "학업성적관리규정 교직원 연수 실시",
+      "sourceTables": [186]
+    },
+    {
+      "id": "elementary_assessment_plan_committee_review",
+      "title": "교과평가계획 및 창의적 체험활동상황 평가계획 사전 심의",
+      "sourceTables": [186, 189]
+    },
+    {
+      "id": "elementary_assessment_criteria_method",
+      "title": "평가기준 및 방법의 적정성",
+      "sourceTables": [186]
+    },
+    {
+      "id": "elementary_assessment_plan_public_notice",
+      "title": "학생·학부모 대상 평가계획 사전 공개 및 이의제기 절차",
+      "sourceTables": [186, 189]
+    },
+    {
+      "id": "elementary_assessment_plan_training",
+      "title": "평가계획 수립 후 교원 연수 실시",
+      "sourceTables": [186]
+    },
+    {
+      "id": "elementary_assessment_no_prior_learning",
+      "title": "교육과정 범위 수준 내 평가 및 선행 출제 예방",
+      "sourceTables": [186]
+    }
+  ],
+  "legalReferences": [
+    "초·중등교육법 시행규칙 제24조",
+    "학교생활기록 작성 및 관리 지침",
+    "전북특별자치도 초등학교 학업성적관리 시행 지침",
+    "학교별 학업성적관리 규정 및 교과별 수행평가기준안",
+    "공교육 정상화 촉진 및 선행교육 규제에 관한 특별법"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "elementary_student_assessment_001",
+      "sourceAuditItemId": "elementary_assessment_committee_organization",
+      "title": "학업성적관리위원회 구성 확인",
+      "shortTitle": "위원회 구성",
+      "description": "초등 학생평가 업무를 심의할 학업성적관리위원회가 구성되어 있고 내부결재 문서가 있는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학업성적관리위원회를 구성했는가?",
+        "학업성적관리위원회 구성 내부결재 문서가 있는가?",
+        "위원회 구성 내용이 학교 학업성적관리규정 및 관련 지침에 맞는가?"
+      ],
+      "evidence": [
+        "학업성적관리위원회 구성 내부 결재 문서"
+      ],
+      "completionCriteria": "학업성적관리위원회 구성 내부결재 문서를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 학업성적관리위원회 구성 (★①~④)",
+      "monthReason": "학년도 초 학업성적관리규정 및 평가계획 심의 전 위원회 구성이 필요하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_002",
+      "sourceAuditItemId": "elementary_assessment_regulation_revision",
+      "title": "학업성적관리규정 제·개정 심의 확인",
+      "shortTitle": "규정 제·개정",
+      "description": "학업성적관리규정 제·개정이 학업성적관리위원회 심의를 거쳐 적정하게 이루어졌는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학업성적관리규정을 제·개정했는가?",
+        "학업성적관리규정 제·개정에 대해 학업성적관리위원회 심의를 거쳤는가?",
+        "자체점검표의 [학업성적관리] 항목에 점검 결과를 표시할 수 있는가?"
+      ],
+      "evidence": [
+        "학업성적관리규정",
+        "학업성적관리위원회 회의록",
+        "학업성적관리규정 제·개정 관련 자료"
+      ],
+      "completionCriteria": "학업성적관리규정 제·개정 자료와 위원회 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 학업성적관리규정 제․개정의 적정 여부 - 학업성적관리위원회 심의 / 원본 표 189: [학업성적관리] 학업성적관리규정 제․개정의 적정 여부",
+      "monthReason": "평가계획 수립과 운영 전에 규정 정비가 선행되어야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_003",
+      "sourceAuditItemId": "elementary_assessment_regulation_training",
+      "title": "학업성적관리규정 교직원 연수 확인",
+      "shortTitle": "규정 연수",
+      "description": "제·개정된 학업성적관리규정에 대해 교직원 연수를 실시했는지 확인한다.",
+      "taskType": "연수",
+      "cycle": "연 1회 및 규정 개정 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학업성적관리규정에 대한 교직원 연수를 실시했는가?",
+        "연수 실시 결과를 확인할 수 있는 자료가 있는가?",
+        "교직원이 평가 관련 규정 변경 사항을 숙지할 수 있도록 안내했는가?"
+      ],
+      "evidence": [
+        "학업성적관리규정 교직원 연수 자료",
+        "연수 결과 공문 또는 등록부",
+        "학업성적관리규정"
+      ],
+      "completionCriteria": "학업성적관리규정 교직원 연수 실시 자료를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 학업성적관리규정에 대한 교직원 연수 실시",
+      "monthReason": "규정 정비 직후 평가 운영 전 교직원 안내가 필요하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_004",
+      "sourceAuditItemId": "elementary_assessment_plan_committee_review",
+      "title": "평가계획 학업성적관리위원회 사전 심의 확인",
+      "shortTitle": "평가계획 심의",
+      "description": "교과평가계획과 창의적 체험활동상황 평가계획이 학업성적관리위원회에서 사전 심의되었는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회 및 평가계획 변경 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "교과평가계획을 학업성적관리위원회에서 사전 심의했는가?",
+        "창의적 체험활동상황 평가계획을 학업성적관리위원회에서 사전 심의했는가?",
+        "평가계획 심의 회의록이 있는가?",
+        "자체점검표의 [평가계획 심의] 항목에 점검 결과를 표시할 수 있는가?"
+      ],
+      "evidence": [
+        "학업성적관리위원회 회의록",
+        "교과평가계획",
+        "창의적 체험활동상황 평가계획"
+      ],
+      "completionCriteria": "교과평가계획 및 창의적 체험활동상황 평가계획의 사전 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 교과평가계획 및 창의적 체험활동상황 평가계획의 학업성적관리위원회 사전 심의 여부 / 원본 표 189: [평가계획 심의] 평가계획 학업성적관리위원회 심의 여부",
+      "monthReason": "평가 실시 전 평가계획 심의가 선행되어야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_005",
+      "sourceAuditItemId": "elementary_assessment_criteria_method",
+      "title": "평가기준 및 방법 적정성 확인",
+      "shortTitle": "평가기준",
+      "description": "평가계획 안의 평가기준과 방법이 관련 지침과 교과별 수행평가기준안에 맞는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회 및 평가계획 변경 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "평가기준이 평가계획에 명시되어 있는가?",
+        "평가방법이 평가계획에 명시되어 있는가?",
+        "평가기준 및 방법이 학교별 학업성적관리규정과 교과별 수행평가기준안에 맞는가?"
+      ],
+      "evidence": [
+        "평가계획",
+        "교과별 수행평가기준안",
+        "학업성적관리규정"
+      ],
+      "completionCriteria": "평가계획의 평가기준 및 방법을 확인하고 관련 기준안과 대조하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 평가기준 및 방법의 적정성 여부",
+      "monthReason": "평가계획 심의와 함께 확인해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_006",
+      "sourceAuditItemId": "elementary_assessment_plan_public_notice",
+      "title": "평가계획 사전 공개 및 이의제기 절차 확인",
+      "shortTitle": "계획 공개",
+      "description": "학생과 학부모에게 평가계획을 사전에 공개하고 이의제기 절차를 준수했는지 확인한다.",
+      "taskType": "공개",
+      "cycle": "연 1회 및 평가계획 변경 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생·학부모 대상 평가계획 사전 공개가 이루어졌는가?",
+        "평가계획 공개 자료 또는 안내 자료가 있는가?",
+        "이의제기 절차를 안내하고 준수했는가?",
+        "자체점검표의 [평가계획 공개] 항목에 점검 결과를 표시할 수 있는가?"
+      ],
+      "evidence": [
+        "평가계획",
+        "학생·학부모 평가계획 사전 공개 자료",
+        "이의제기 절차 안내 자료"
+      ],
+      "completionCriteria": "평가계획 사전 공개 자료와 이의제기 절차 안내 자료를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 학생, 학부모 대상 평가계획 사전 공개 및 이의제기 절차 준수 여부 / 원본 표 189: [평가계획 공개] 학생, 학부모 대상 평가계획 사전 공개 및 이의제기 절차 준수 여부",
+      "monthReason": "평가계획 심의 후 학생·학부모에게 실제 평가 전 안내되어야 하므로 4월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_007",
+      "sourceAuditItemId": "elementary_assessment_plan_training",
+      "title": "평가계획 수립 후 교원 연수 확인",
+      "shortTitle": "평가계획 연수",
+      "description": "평가계획 수립 후 교원을 대상으로 평가계획 관련 연수를 실시했는지 확인한다.",
+      "taskType": "연수",
+      "cycle": "연 1회 및 평가계획 변경 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "평가계획 수립 후 교원 연수를 실시했는가?",
+        "교원 연수에서 평가기준, 평가방법, 평가계획 공개 등 주요 사항을 안내했는가?",
+        "연수 실시 자료 또는 회의록이 있는가?"
+      ],
+      "evidence": [
+        "회의록",
+        "평가계획",
+        "평가계획 교원 연수 자료"
+      ],
+      "completionCriteria": "평가계획 수립 후 교원 연수 자료 또는 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 평가계획 수립 후 교원 연수 실시 및 학생·학부모 공개",
+      "monthReason": "평가계획 수립 후 실제 운영 전 교원 안내가 필요하므로 4월 권장"
+    },
+    {
+      "templateTaskId": "elementary_student_assessment_008",
+      "sourceAuditItemId": "elementary_assessment_no_prior_learning",
+      "title": "교육과정 범위 내 평가 및 선행 출제 예방 확인",
+      "shortTitle": "선행출제 예방",
+      "description": "평가가 교육과정 범위와 수준 안에서 이루어지고 선행 출제가 발생하지 않도록 평가계획과 평가 결과물을 확인한다.",
+      "taskType": "점검",
+      "cycle": "평가 전·후 수시",
+      "recommendedMonth": 6,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "평가가 교육과정 범위와 수준 안에서 계획되었는가?",
+        "선행 출제 예방 관점에서 평가 문항 또는 평가 결과물을 확인했는가?",
+        "평가계획과 평가 결과물이 서로 일치하는가?"
+      ],
+      "evidence": [
+        "평가계획",
+        "평가 결과물",
+        "교과별 수행평가기준안"
+      ],
+      "completionCriteria": "평가계획과 평가 결과물을 확인해 교육과정 범위 내 평가 및 선행 출제 예방 여부를 점검하면 완료 처리한다.",
+      "sourceBasis": "원본 표 186: 교육과정 범위 수준 내에서의 평가(선행 출제 예방)",
+      "monthReason": "평가 운영 중 실제 평가 결과물까지 함께 확인하기 위해 6월 권장"
+    }
+  ]
+}

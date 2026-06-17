@@ -1,0 +1,160 @@
+{
+  "templateId": "school_safety_education",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학교(유치원) 안전교육",
+  "displayTitle": "학교안전교육",
+  "description": "학교안전계획과 학운위 심의, 학교안전책임관 지정, 학생안전교육 시간 확보·실시, 교직원 안전교육을 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-6",
+    "itemName": "학교(유치원) 안전교육"
+  },
+  "schoolLevels": ["유", "초", "중", "고", "특"],
+  "aliases": ["안전교육", "학교안전", "안전계획", "7대 안전교육", "재난안전", "생활안전"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-6 학교(유치원) 안전교육",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 240·243의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "plan", "title": "학교안전계획 수립 및 학교운영위원회 심의", "sourceTables": [240] },
+    { "id": "officer", "title": "학교안전책임관 지정", "sourceTables": [240] },
+    { "id": "student_hours", "title": "학생안전교육 시간 확보", "sourceTables": [240] },
+    { "id": "student_edu", "title": "학생안전교육 실시", "sourceTables": [240, 243] },
+    { "id": "staff_edu", "title": "교직원 안전교육 실시", "sourceTables": [240] }
+  ],
+  "legalReferences": [
+    "① 학교안전사고 예방 및 보상에 관한 법률 제4조 및 같은 법 시행령 제6조",
+    "② 학교안전사고 예방 및 보상에 관한 법률 제8조 및 같은 법 시행규칙 제2조",
+    "③ 전북특별자치도교육청 학교안전종합계획",
+    "④ 학교안전교육 실시 기준 등에 관한 고시 제3조·제4조(교육부 고시)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "sse_001",
+      "sourceAuditItemId": "plan",
+      "title": "학교안전계획 수립 및 학운위 심의",
+      "shortTitle": "안전계획 심의",
+      "description": "매년 학교안전계획을 수립하고 학교운영위원회 심의를 거쳤는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교안전계획을 매년 수립했는가?",
+        "학교운영위원회 심의를 거쳤는가?",
+        "심의 회의록을 보관하고 있는가?"
+      ],
+      "evidence": ["학교안전계획", "학교운영위원회 회의록"],
+      "completionCriteria": "학교안전계획 수립과 학교운영위원회 심의를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 240: 학교안전계획 수립 및 학교운영위원회 심의(매년) (★①)",
+      "monthReason": "학기 초 안전계획 수립·심의 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "sse_002",
+      "sourceAuditItemId": "officer",
+      "title": "학교안전책임관 지정",
+      "shortTitle": "안전책임관 지정",
+      "description": "학교장 또는 교감을 학교안전책임관으로 지정하여 학교 안전사고 예방 체제를 구축했는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교장 또는 교감을 학교안전책임관으로 지정했는가?",
+        "학교 안전사고 예방 체제를 구축했는가?"
+      ],
+      "evidence": ["학교안전책임관 지정 내부결재 공문", "안전사고 예방 체제 자료"],
+      "completionCriteria": "안전책임관 지정과 예방 체제 구축을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 240: 학교장 또는 교감을 학교안전책임관으로 지정하여 학교 안전사고 예방 체제 구축",
+      "monthReason": "학기 초 안전 운영 체제를 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "sse_003",
+      "sourceAuditItemId": "student_hours",
+      "title": "학생안전교육 시간 확보",
+      "shortTitle": "안전교육 시간확보",
+      "description": "7대 영역 안전교육 시간을 연간 51차시 이상(유치원 44차시 이상) 교과연계·창의적 체험활동으로 확보했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "7대 영역 안전교육 시간을 연간 51차시 이상(유치원 44차시 이상) 확보했는가?",
+        "교과연계 및 창의적 체험활동으로 시간을 확보했는가?"
+      ],
+      "evidence": ["안전교육 시간 확보 계획", "교육과정 연계 자료"],
+      "completionCriteria": "7대 영역 안전교육 시간 확보를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 240: 학생안전교육 시간 확보 - 7대 영역 연간 51차시 이상(유치원 44차시 이상), 교과연계·창의적 체험활동 활용 (★①,②,③)",
+      "monthReason": "교육과정 운영 안정기에 시간 확보 현황을 점검하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "sse_004",
+      "sourceAuditItemId": "student_edu",
+      "title": "학생안전교육 실시",
+      "shortTitle": "학생안전교육",
+      "description": "확보한 시간에 따라 학생안전교육을 교과연계·창의적 체험활동으로 실시하고 결과를 관리하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연중",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생안전교육을 계획한 시간만큼 실시했는가?",
+        "교과연계 및 창의적 체험활동으로 실시했는가?",
+        "실시 결과를 기록·관리하고 있는가?"
+      ],
+      "evidence": ["학생안전교육 실시 자료", "교육 실시 결과 기록"],
+      "completionCriteria": "학생안전교육 실시와 결과 관리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 240·243: 교육과정 연계 안전교육 시간 확보 및 실시 (★①,②,③)",
+      "monthReason": "1학기 실시 누계를 점검하고 2학기 운영을 준비하기 위해 9월 권장"
+    },
+    {
+      "templateTaskId": "sse_005",
+      "sourceAuditItemId": "staff_edu",
+      "title": "교직원 안전교육 실시",
+      "shortTitle": "교직원 안전교육",
+      "description": "교직원 대상 안전교육을 3년마다 15시간 이상 실시하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "3년마다 15시간",
+      "recommendedMonth": 12,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "교직원 대상 안전교육을 3년마다 15시간 이상 실시했는가?",
+        "이수 현황을 관리하고 있는가?"
+      ],
+      "evidence": ["교직원 안전교육 실시·이수 자료", "관련 내부결재 공문"],
+      "completionCriteria": "교직원 안전교육 3년 15시간 이상 실시·이수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 240: 교직원 대상 안전교육 3년마다 15시간 이상 실시",
+      "monthReason": "연말에 교직원 이수 현황을 누계로 점검하기 위해 12월 권장"
+    }
+  ]
+}

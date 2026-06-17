@@ -1,0 +1,162 @@
+{
+  "templateId": "violence_abuse_prevention_education",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학교폭력·성폭력·아동학대 및 가정폭력 예방교육",
+  "displayTitle": "폭력·학대 예방교육",
+  "description": "학교폭력·성폭력(성희롱·성매매)·아동학대·가정폭력 예방교육의 대상·횟수 기준 충족과 결과 보관을 점검 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-2",
+    "itemName": "학교(성)폭력, 아동학대 및 가정폭력예방교육"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["학교폭력 예방교육", "성폭력 예방교육", "아동학대 예방교육", "가정폭력 예방교육", "폭력예방교육", "예방교육"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-2 학교(성)폭력, 아동학대 및 가정폭력예방교육",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 217·220의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "school_violence_edu", "title": "학교폭력 예방교육 계획 수립 및 실시", "sourceTables": [217, 220] },
+    { "id": "sexual_violence_edu", "title": "성희롱·성폭력·성매매 예방교육 실시", "sourceTables": [217, 220] },
+    { "id": "harassment_measures", "title": "성희롱 방지조치 의무이행", "sourceTables": [217] },
+    { "id": "child_abuse_edu", "title": "아동학대 예방교육 실시", "sourceTables": [217, 220] },
+    { "id": "domestic_violence_edu", "title": "가정폭력 예방교육 실시", "sourceTables": [217, 220] }
+  ],
+  "legalReferences": [
+    "① 학교폭력예방 및 대책에 관한 법률 제15조, 같은 법 시행령 제17조",
+    "② 성폭력방지 및 피해자보호 등에 관한 법률 시행령 제2조",
+    "③ 아동복지법 제26조 제3항, 제26조의2",
+    "④ 가정폭력방지 및 피해자보호 등에 관한 법률 시행령 제1조의2, 제4조의3",
+    "⑤ 학교폭력(아동학대) 사안처리 가이드북(전북특별자치도교육청)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "vape_001",
+      "sourceAuditItemId": "school_violence_edu",
+      "title": "학교폭력 예방교육 실시",
+      "shortTitle": "학교폭력 예방교육",
+      "description": "학생·교직원·학부모를 대상으로 학교폭력 예방교육을 학기별 1회 이상 실시하고 계획·결과를 보관하는지 확인한다(유치원 해당 없음).",
+      "taskType": "교육",
+      "cycle": "학기별 1회 이상",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생·교직원·학부모를 대상으로 학교폭력 예방교육을 실시했는가?",
+        "학기별 1회 이상 실시했는가?",
+        "교육 계획과 실시 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["학교교육과정계획서", "학교폭력 예방교육 실시 내부결재 공문"],
+      "completionCriteria": "대상별 학교폭력 예방교육을 학기별 1회 이상 실시하고 결과를 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 217·220: 학교폭력 예방교육 계획 수립 및 실시 - 학생·교직원·학부모 대상 학기별 1회 이상(유치원 해당 없음) (★①)",
+      "monthReason": "1학기 예방교육을 학기 초에 실시·기록하기 위해 3월 권장"
+    },
+    {
+      "templateTaskId": "vape_002",
+      "sourceAuditItemId": "sexual_violence_edu",
+      "title": "성폭력·성희롱 예방교육 실시",
+      "shortTitle": "성폭력 예방교육",
+      "description": "성폭력(성희롱·성매매·디지털성폭력 포함) 예방교육을 대상별 기준(유·초 연 1회 1시간, 중·고 영역별 각 연 1회, 교직원 영역별 각 연 1회 1시간)에 맞게 실시했는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "대상별 연 1회 이상",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "유·초등학생에게 성폭력 예방교육을 연 1회, 1시간 이상 실시했는가?",
+        "중·고등학생에게 성폭력·성매매 예방교육을 각 연 1회, 1시간 이상 실시했는가?",
+        "교직원에게 성희롱·성폭력·성매매 예방교육을 영역별 각 연 1회, 각 1시간 이상 실시했는가?"
+      ],
+      "evidence": ["성폭력·성희롱 예방교육 실시 내부결재 공문", "대상별 교육 실시 결과 자료"],
+      "completionCriteria": "대상별 횟수·시간 기준을 충족해 실시하고 결과를 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 217: 성희롱·성폭력 예방교육 계획 수립 및 실시 - 유·초 연 1회 1시간, 중·고 성폭력·성매매 각 연 1회, 교직원 영역별 각 연 1회 1시간 (★②)",
+      "monthReason": "학교폭력 예방교육에 이어 상반기 안에 증빙을 확보하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "vape_003",
+      "sourceAuditItemId": "harassment_measures",
+      "title": "성희롱 방지조치 의무이행 점검",
+      "shortTitle": "성희롱 방지조치",
+      "description": "성희롱 방지를 위한 의무이행사항(고충처리 체계, 자체 점검, 결과 제출 등)을 이행했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "성희롱 방지조치 의무이행사항을 이행했는가?",
+        "고충처리 체계·자체 점검·결과 제출 등 절차를 갖추고 있는가?"
+      ],
+      "evidence": ["성희롱 방지조치 의무이행 결과 자료", "관련 내부결재 공문"],
+      "completionCriteria": "성희롱 방지조치 의무이행 내역을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 217: 성희롱 방지조치 의무이행사항 이행 여부",
+      "monthReason": "성폭력 예방교육과 함께 상반기에 의무이행 점검을 마치기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "vape_004",
+      "sourceAuditItemId": "child_abuse_edu",
+      "title": "아동학대 예방교육 실시",
+      "shortTitle": "아동학대 예방교육",
+      "description": "아동학대 예방 및 신고의무 교육을 연 1회 이상 실시하고 결과를 보관하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연 1회 이상",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "아동학대 예방교육을 연 1회 이상 실시했는가?",
+        "신고의무자 교육 내용을 포함했는가?",
+        "교육 실시 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["아동학대 예방교육 실시 내부결재 공문", "교육 실시 결과 자료"],
+      "completionCriteria": "아동학대 예방교육을 연 1회 이상 실시하고 결과를 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 217·220: 아동학대 예방교육 실시 (★③,⑤)",
+      "monthReason": "상반기 내 신고의무 교육 증빙을 확보하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "vape_005",
+      "sourceAuditItemId": "domestic_violence_edu",
+      "title": "가정폭력 예방교육 실시",
+      "shortTitle": "가정폭력 예방교육",
+      "description": "가정폭력 예방교육을 연 1회 이상 실시하고 결과를 보관하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연 1회 이상",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "가정폭력 예방교육을 연 1회 이상 실시했는가?",
+        "교육 실시 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["가정폭력 예방교육 실시 내부결재 공문", "교육 실시 결과 자료"],
+      "completionCriteria": "가정폭력 예방교육을 연 1회 이상 실시하고 결과를 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 217·220: 가정폭력 예방교육 실시 (★④)",
+      "monthReason": "연중 누락되지 않도록 하반기 초 9월에 실시·점검 권장"
+    }
+  ]
+}

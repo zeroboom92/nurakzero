@@ -1,0 +1,165 @@
+{
+  "templateId": "elementary_student_records",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "초등 학교생활기록부 작성·정정·관리",
+  "displayTitle": "초등 학교생활기록부",
+  "description": "초등 학교생활기록부의 작성·관리 계획, 나이스 권한 관리, 영역별 기재, 정정 절차, 자료 관리를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "2",
+    "areaName": "초·중등 학사관리",
+    "itemCode": "2-4-1",
+    "itemName": "초등 학교생활기록부 작성·정정·관리"
+  },
+  "schoolLevels": ["초"],
+  "aliases": ["생활기록부", "학교생활기록부", "생기부", "학생부", "생활기록부 정정", "나이스"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "2-4-1 초등 학교생활기록부 작성·정정·관리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 161·164의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "plan", "title": "학교생활기록부 작성·관리 계획 수립", "sourceTables": [161] },
+    { "id": "neis_auth", "title": "나이스 권한 관리의 적정성", "sourceTables": [161] },
+    { "id": "entry", "title": "영역별 기재의 적정성", "sourceTables": [161, 164] },
+    { "id": "correction", "title": "학교생활기록부 정정의 적정성", "sourceTables": [161] },
+    { "id": "data_management", "title": "작성·자료 관리", "sourceTables": [161] }
+  ],
+  "legalReferences": [
+    "① 초·중등교육법 제25조·제30조의4~7",
+    "② 개인정보보호법 제15조·제22조",
+    "③ 초·중등교육법 시행규칙 제21조~제25조",
+    "④ 학교생활기록 작성 및 관리지침(교육부)",
+    "⑤ 학교생활기록부 기재요령(교육부)",
+    "⑥ 학교생활기록부 현장점검 도움자료(교육부)",
+    "⑦ 전북특별자치도 초등학교 학업성적관리 시행지침"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "esr_001",
+      "sourceAuditItemId": "plan",
+      "title": "학교생활기록부 작성·관리 계획 수립",
+      "shortTitle": "작성·관리 계획",
+      "description": "학교생활기록부 작성·관리 계획을 수립하고 자료 관리 방안을 마련했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교생활기록부 작성·관리 계획을 수립했는가?",
+        "자료 관리 방안을 포함했는가?",
+        "내부결재를 완료했는가?"
+      ],
+      "evidence": ["학교생활기록부 작성·관리 계획", "관련 내부결재 공문"],
+      "completionCriteria": "작성·관리 계획 수립과 내부결재를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 161: 학교생활기록부 작성·관리 계획 수립 및 자료 관리의 적정 (★①~⑧)",
+      "monthReason": "학기 초 작성·관리 계획을 먼저 세워야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "esr_002",
+      "sourceAuditItemId": "neis_auth",
+      "title": "나이스 권한 관리의 적정성",
+      "shortTitle": "나이스 권한",
+      "description": "나이스 권한관리 책임자·담당자를 지정(내부결재)하고 권한보유대장을 출력·관리하며, 개인정보처리 메뉴가 포함된 특정 권한 보유 인원과 미해당자 권한 회수를 점검하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회 및 인사이동 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "권한관리 책임자 및 담당자를 내부결재로 지정했는가?",
+        "권한보유대장을 출력·관리하고 있는가?",
+        "특정 권한 보유 인원과 미해당자 권한 회수를 점검했는가?"
+      ],
+      "evidence": ["나이스 권한관리 책임자·담당자 지정 내부결재", "권한보유대장", "권한 점검 자료"],
+      "completionCriteria": "권한 책임자 지정·권한보유대장·특정 권한 점검을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 161: 학교생활기록부 나이스 권한 관리의 적정성 - 권한관리 책임자·담당자 지정(내부결재), 권한보유대장 출력, 개인정보처리 메뉴 특정 권한 인원 확인, 미해당자 권한 회수",
+      "monthReason": "인사이동 직후 학기 초에 권한을 정비해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "esr_003",
+      "sourceAuditItemId": "entry",
+      "title": "영역별 기재의 적정성",
+      "shortTitle": "기재 적정성",
+      "description": "학교생활기록부 각 영역을 기재요령에 맞게 입력하고, 행동특성 및 종합의견 등에서 중복 기재가 없는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기별",
+      "recommendedMonth": 6,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "각 영역을 기재요령에 맞게 입력했는가?",
+        "행동특성 및 종합의견 등에서 중복 기재가 없는가?",
+        "확인 점검표로 기재 상태를 점검했는가?"
+      ],
+      "evidence": ["학교생활기록부 확인 점검표", "학교생활기록부(영역별 기재 화면)"],
+      "completionCriteria": "영역별 기재 적정성과 중복 기재 여부를 점검표로 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 161·164: 학교생활기록부 각 영역별 입력·기재의 적정 - 확인 점검표로 대체 가능, 행동특성 및 종합의견 중복 기재 점검 (★①~⑧)",
+      "monthReason": "1학기 기재 내용을 학기말 전 점검하기 위해 6월 권장"
+    },
+    {
+      "templateTaskId": "esr_004",
+      "sourceAuditItemId": "correction",
+      "title": "학교생활기록부 정정 절차 준수",
+      "shortTitle": "정정 절차",
+      "description": "학교생활기록부 정정 시 객관적 증빙자료를 갖추고 학업성적관리위원회 심의와 학교장 포함 4단 결재를 거치며, 연도별 정정대장을 작성·보관하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "정정 사유 발생 시 수시",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "정정 시 객관적 증빙자료를 갖췄는가?",
+        "학업성적관리위원회 심의와 학교장 포함 4단 결재를 거쳤는가?",
+        "연도별 정정대장을 작성·보관하고 있는가?"
+      ],
+      "evidence": ["연도별 정정대장", "학업성적관리위원회 회의록", "정정 증빙자료 및 내부결재 공문"],
+      "completionCriteria": "정정 증빙·위원회 심의·4단 결재·정정대장을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 161: 학교생활기록부 정정의 적정 - 학업성적관리위원회 심의, 학교장 포함 4단 결재, 연도별 정정대장 작성 및 증빙자료 보관 (★③,⑤,⑥)",
+      "monthReason": "정정은 수시 발생하나, 2학기 중 정정대장 관리 상태를 점검하기 위해 9월 권장"
+    },
+    {
+      "templateTaskId": "esr_005",
+      "sourceAuditItemId": "data_management",
+      "title": "작성 마감 및 자료 관리",
+      "shortTitle": "마감·자료관리",
+      "description": "학교생활기록부 작성을 기한 내 마감하고 관련 자료를 안전하게 보관·관리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학년말",
+      "recommendedMonth": 12,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교생활기록부 작성을 기한 내 마감했는가?",
+        "관련 자료를 안전하게 보관·관리하고 있는가?"
+      ],
+      "evidence": ["학교생활기록부 마감 자료", "자료 관리 관련 내부결재 공문"],
+      "completionCriteria": "기한 내 마감과 자료 보관 상태를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 161: 학교생활기록부 작성 및 자료 관리",
+      "monthReason": "학년말 마감·자료 관리를 점검하기 위해 12월 권장"
+    }
+  ]
+}

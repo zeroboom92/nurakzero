@@ -1,0 +1,167 @@
+{
+  "templateId": "school_violence_case_handling",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학교폭력 사안처리",
+  "displayTitle": "학교폭력 사안처리",
+  "description": "학교폭력 전담기구 구성과 사안 신고·조사·보고·자체해결 심의, 성폭력 사안처리 절차를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-3",
+    "itemName": "학교폭력 사안처리"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["학교폭력", "학폭", "사안처리", "학교폭력대장", "전담기구", "자체해결"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-3 학교폭력 사안처리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 222·225의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이며, 사안처리는 발생 시점에 처리하는 수시 업무가 많다."
+  },
+  "sourceAuditItems": [
+    { "id": "task_force", "title": "학교폭력 전담기구 구성의 적정성", "sourceTables": [222] },
+    { "id": "case_procedure", "title": "학교폭력 사안처리 절차 준수", "sourceTables": [222, 225] },
+    { "id": "self_resolution", "title": "학교장 자체해결 심의", "sourceTables": [222, 225] },
+    { "id": "sexual_case", "title": "성폭력 사안처리 절차 준수", "sourceTables": [222] }
+  ],
+  "legalReferences": [
+    "① 학교폭력예방 및 대책에 관한 법률 및 같은 법 시행령",
+    "② 학교폭력(아동학대) 사안처리 가이드북(전북특별자치도교육청)",
+    "③ 학교 내 성희롱·성폭력 사안처리 대응 매뉴얼(교육부)",
+    "④ 여성가족부 성희롱·성폭력 예방지침 표준안 및 해설 제6조·제7조·제13조·제14조",
+    "⑤ 성폭력방지 및 피해자보호 등에 관한 법률 제5조의4·제9조",
+    "⑥ 아동·청소년의 성보호에 관한 법률 제34조 제2항",
+    "⑦ 양성평등기본법 제31조의2",
+    "⑧ 학교폭력예방 및 대책에 관한 법률 제14조 및 같은 법 시행령 제16조",
+    "⑨ 학교폭력예방 및 대책에 관한 법률 제16조·제20조"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "svc_001",
+      "sourceAuditItemId": "task_force",
+      "title": "학교폭력 전담기구 구성의 적정성",
+      "shortTitle": "전담기구 구성",
+      "description": "학교폭력 전담기구를 규정에 맞게 구성하고, 학부모를 전체 구성원의 1/3 이상으로 학교운영위원회 추천을 거쳐 선출했는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회 및 위원 교체 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교폭력 전담기구를 구성했는가?",
+        "학부모가 전체 구성원의 1/3 이상인가?",
+        "학부모 위원을 학교운영위원회 추천을 거쳐 선출했는가?"
+      ],
+      "evidence": ["학교폭력 전담기구 구성 내부결재 공문", "전담기구 학부모 구성 관련 서류", "학교운영위원회 회의록"],
+      "completionCriteria": "전담기구 구성 서류와 학교운영위원회 회의록으로 학부모 비율·선출 절차를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 222: 학교폭력 전담기구 구성의 적정성 - 전체 구성원의 1/3 이상 학부모 구성, 학부모 선출은 학교운영위원회 추천 (★②,⑧)",
+      "monthReason": "학기 초 전담기구를 구성·점검해 두어야 사안 발생 시 즉시 대응할 수 있으므로 3월 권장"
+    },
+    {
+      "templateTaskId": "svc_002",
+      "sourceAuditItemId": "case_procedure",
+      "title": "학교폭력 사안 신고·접수 및 초기대응",
+      "shortTitle": "신고·초기대응",
+      "description": "사안 인지 시 신고접수대장 기록, 피해학생으로부터 가해자 분리(최대 7일 이내), 관련 학생 안전 조치와 학교장 보고가 절차대로 이루어졌는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "신고접수대장에 사안을 기록했는가?",
+        "피해학생으로부터 가해자를 최대 7일 이내 분리했는가?",
+        "관련 학생 안전 조치 및 학교장 보고가 이루어졌는가?"
+      ],
+      "evidence": ["신고접수대장", "사안보고서", "관련 내부결재 공문"],
+      "completionCriteria": "신고접수 기록·가해자 분리·안전조치·학교장 보고가 절차대로 처리되었는지 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 222: 학교폭력 사안처리 절차 준수 - 신고접수대장 기록, 피해학생으로부터 가해자 분리(최대 7일 이내), 관련 학생 안전 조치 및 학교장 보고 (★①,②,⑧,⑨)",
+      "monthReason": "사안 발생 시 즉시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "svc_003",
+      "sourceAuditItemId": "case_procedure",
+      "title": "보호자 통보 및 교육지원청 사안보고",
+      "shortTitle": "통보·사안보고",
+      "description": "사안 발생 시 보호자에게 통보하고 교육지원청에 48시간 이내 사안보고를 했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "관련 학생 보호자에게 통보했는가?",
+        "교육지원청에 48시간 이내 사안보고를 했는가?",
+        "보고 관련 공문·기록을 보관하고 있는가?"
+      ],
+      "evidence": ["사안보고서", "교육지원청 사안보고 공문", "보호자 통보 관련 자료"],
+      "completionCriteria": "보호자 통보와 48시간 이내 교육지원청 사안보고 기록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 222: 보호자 통보 및 교육지원청 사안보고(48시간 이내)",
+      "monthReason": "사안 발생 시 시한 내 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "svc_004",
+      "sourceAuditItemId": "self_resolution",
+      "title": "학교장 자체해결 심의 절차 준수",
+      "shortTitle": "자체해결 심의",
+      "description": "경미한 학교폭력 요건 충족과 피해학생(보호자) 동의 여부를 심의하고, 최대 3주 이내에 학교장 자체해결 여부를 결정했는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "경미한 학교폭력 요건을 심의했는가?",
+        "피해학생(보호자)의 자체해결 동의를 확인했는가?",
+        "최대 3주 이내에 자체해결 여부를 심의·결정했는가?"
+      ],
+      "evidence": ["학교장 자체해결 심의 결과보고서", "자체해결 동의서", "전담기구 심의 회의록"],
+      "completionCriteria": "자체해결 요건 심의·피해학생 동의·심의 기한 준수를 서류로 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 222·225: 학교장 자체해결 여부 심의 - 경미한 학교폭력 요건 심의 및 피해학생 동의 확인, 최대 3주 이내",
+      "monthReason": "사안 발생 시 기한 내 심의하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "svc_005",
+      "sourceAuditItemId": "sexual_case",
+      "title": "성폭력 사안처리 절차 준수",
+      "shortTitle": "성폭력 사안처리",
+      "description": "성폭력 사안 발생 시 수사기관에 즉시 신고하는 등 별도 대응 매뉴얼에 따른 처리 절차를 준수했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "성폭력 사안을 수사기관에 즉시 신고했는가?",
+        "성희롱·성폭력 사안처리 대응 매뉴얼 절차를 준수했는가?",
+        "관련 서류와 보고 기록을 보관하고 있는가?"
+      ],
+      "evidence": ["성폭력 사안 관련 서류", "수사기관 신고 관련 자료", "관련 내부결재 공문"],
+      "completionCriteria": "수사기관 즉시 신고와 대응 매뉴얼 절차 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 222: 성폭력 사안처리 절차 준수 - 수사기관 즉시 신고 등 (★③,④,⑤,⑥,⑦)",
+      "monthReason": "사안 발생 시 즉시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

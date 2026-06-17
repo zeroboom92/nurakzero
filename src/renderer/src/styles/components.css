@@ -170,11 +170,35 @@
 .check-item--removing {
   animation: fadeSlideOut 0.26s ease forwards;
 }
-.check-item__title {
+.check-item__main {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.check-item__title {
   font-size: 14px;
   line-height: 1.35;
   color: var(--text-charcoal);
+}
+/* 여러 업무를 함께 볼 때: 좌측 색 띠 + 업무 라벨 */
+.check-item--tagged {
+  border-left-width: 3px;
+  border-left-style: solid;
+  padding-left: 11px;
+}
+.check-item__work {
+  align-self: flex-start;
+  max-width: 100%;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .check-item__dot {
   width: 7px;
@@ -182,6 +206,8 @@
   border-radius: 50%;
   background: var(--accent-coral);
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 4px;
 }
 
 /* 체크박스 */

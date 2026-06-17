@@ -1,0 +1,136 @@
+{
+  "templateId": "kindergarten_after_school",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "유치원 방과후 과정",
+  "displayTitle": "유치원 방과후 과정",
+  "description": "유치원 방과후 과정 운영 계획과 운영위 심의, 운영시간 준수, 특성화프로그램 기준, 정보공시 일치를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "1",
+    "areaName": "유치원 학사관리",
+    "itemCode": "1-5",
+    "itemName": "유치원 방과후 과정"
+  },
+  "schoolLevels": ["유"],
+  "aliases": ["유치원 방과후", "방과후 과정", "유치원 돌봄", "방과후과정"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "1-5 유치원 방과후 과정",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 135·138의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "plan", "title": "방과후 과정 운영 계획 수립 및 심의", "sourceTables": [135] },
+    { "id": "hours", "title": "방과후 과정 운영시간 준수", "sourceTables": [135] },
+    { "id": "program", "title": "방과후 특성화프로그램 운영 기준", "sourceTables": [135] },
+    { "id": "disclosure", "title": "운영 내용 정보공시 일치", "sourceTables": [135, 138] }
+  ],
+  "legalReferences": [
+    "① 유아교육법 제13조·제19조의4",
+    "② 교육관련기관의 정보공개에 관한 특례법 제5조의2",
+    "③ 유치원 교육과정 및 방과후 과정 내실화 계획(전북특별자치도교육청)",
+    "④ 유치원 방과후 과정 길라잡이(전북특별자치도교육청)",
+    "⑤ 전북유아교육계획"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "kas_001",
+      "sourceAuditItemId": "plan",
+      "title": "방과후 과정 운영 계획 수립 및 운영위 심의",
+      "shortTitle": "운영 계획 심의",
+      "description": "방과후 과정 운영 계획을 수립하고 유치원운영위원회 심의를 거쳤는지 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "방과후 과정 운영 계획을 수립했는가?",
+        "유치원운영위원회 심의를 거쳤는가?",
+        "심의 회의록을 보관하고 있는가?"
+      ],
+      "evidence": ["방과후 과정 운영 계획", "유치원운영위원회 회의록"],
+      "completionCriteria": "운영 계획 수립과 운영위원회 심의를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 135: 방과후 과정 운영 계획 수립 및 유치원운영위원회 심의 (★①,②,④,⑤,⑥)",
+      "monthReason": "학기 초 방과후 과정 운영 계획 수립·심의 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "kas_002",
+      "sourceAuditItemId": "hours",
+      "title": "방과후 과정 운영시간 준수",
+      "shortTitle": "운영시간 준수",
+      "description": "방과후 과정을 교육과정 시간 포함 1일 8시간 이상 운영하고, 개별시간 조정 시 보호자 동의서를 보관하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기별",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "방과후 과정을 교육과정 포함 1일 8시간 이상 운영했는가?",
+        "개별시간 조정 시 보호자 동의서를 보관하고 있는가?"
+      ],
+      "evidence": ["방과후 과정 운영 계획", "운영시간 자료", "개별시간 조정 보호자 동의서"],
+      "completionCriteria": "1일 8시간 이상 운영과 개별시간 조정 동의서 보관을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 135: 방과후 과정은 교육과정 포함 1일 8시간 이상 운영, 개별시간 조정 시 보호자 동의서 보관",
+      "monthReason": "신학기 방과후 운영시간 준수 상태를 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "kas_003",
+      "sourceAuditItemId": "program",
+      "title": "방과후 특성화프로그램 운영 기준",
+      "shortTitle": "특성화 운영기준",
+      "description": "방과후 특성화프로그램을 유아 1인당 주 5개 이하, 1일 1개, 회당 30분~1시간 이내 기준에 맞게 운영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기별",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "유아 1인당 주 5개 이하로 운영했는가?",
+        "1일 1개, 회당 30분~1시간 이내로 운영했는가?",
+        "특성화프로그램 운영 절차를 준수했는가?"
+      ],
+      "evidence": ["방과후 특성화프로그램 운영 계획", "프로그램 시간표", "참여 현황 자료"],
+      "completionCriteria": "특성화프로그램 운영 기준(개수·시간) 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 135: 방과후 특성화프로그램 운영 - 유아 1인당 주 5개 이하, 1일 1개, 30분~1시간 이내 운영",
+      "monthReason": "특성화프로그램 운영이 안정화되는 5월에 기준 준수를 점검 권장"
+    },
+    {
+      "templateTaskId": "kas_004",
+      "sourceAuditItemId": "disclosure",
+      "title": "운영 내용 정보공시 일치",
+      "shortTitle": "정보공시 일치",
+      "description": "방과후 과정 운영시간·학급편성·참여유아수·특성화프로그램 등 운영 내용이 유치원 정보공시 내용과 일치하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "정보공시 시기",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "운영시간·학급편성·참여유아수·특성화프로그램을 정보공시에 공개했는가?",
+        "실제 운영 내용과 정보공시 내용이 일치하는가?"
+      ],
+      "evidence": ["유치원 정보공시 자료", "방과후 과정 운영 자료"],
+      "completionCriteria": "운영 내용과 정보공시 내용의 일치를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 135·138: 방과후 과정 운영 내용의 유치원 정보공시 일치 - 운영시간·학급편성·참여유아수·특성화프로그램 등 (★③)",
+      "monthReason": "정보공시 갱신 시기에 맞춰 운영 내용 일치를 점검하기 위해 9월 권장"
+    }
+  ]
+}

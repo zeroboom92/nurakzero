@@ -1,0 +1,160 @@
+{
+  "templateId": "school_physical_education",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학교체육",
+  "displayTitle": "학교체육",
+  "description": "학교체육소위원회 운영, 학교스포츠클럽 계획·기록 반영, PAPS 운영과 저체력·비만 학생 관리를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "7",
+    "areaName": "체육·보건 교육",
+    "itemCode": "7-1",
+    "itemName": "학교체육"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["체육", "학교체육", "체육교육", "스포츠클럽", "건강체력"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "7-1 학교체육",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 265·268의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "committee", "title": "학교체육소위원회 구성·운영", "sourceTables": [265] },
+    { "id": "sports_club", "title": "학교스포츠클럽 운영", "sourceTables": [265] },
+    { "id": "club_record", "title": "학교스포츠클럽 결과 기록 반영", "sourceTables": [265, 268] },
+    { "id": "paps", "title": "학생건강체력평가제(PAPS) 운영", "sourceTables": [265] },
+    { "id": "health_class", "title": "저체력·비만 학생 건강체력교실", "sourceTables": [265, 268] }
+  ],
+  "legalReferences": [
+    "① 학교체육 주요업무계획(전북특별자치도교육청)",
+    "② 학교체육진흥법 제8조·제9조·제10조·제13조의2"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "spe_001",
+      "sourceAuditItemId": "committee",
+      "title": "학교체육소위원회 구성·운영",
+      "shortTitle": "체육소위원회",
+      "description": "학교체육소위원회를 7명 내외(학교운영위원회 위원·체육 관련 전문가 등)로 구성하고 학교스포츠클럽 운영·학생선수 보호 등 학교체육 운영 전반을 심의하는지 확인한다(교육과정위원회 통합 운영 가능).",
+      "taskType": "구성",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교체육소위원회를 7명 내외로 구성했는가?",
+        "학교운영위원회 위원·체육 관련 전문가 등으로 구성했는가?",
+        "학교체육 운영 전반(스포츠클럽·학생선수 보호 등)을 심의했는가?"
+      ],
+      "evidence": ["학교체육소위원회 구성 내부결재 공문", "소위원회 회의록"],
+      "completionCriteria": "소위원회 구성 요건과 심의 운영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 265: 학교체육소위원회 구성·운영 - 7명 내외(학교운영위원회 위원·체육 전문가 등), 학교체육 운영 전반 심의, 교육과정위원회 통합 운영 가능 (★①,②)",
+      "monthReason": "학기 초 위원회를 구성해 체육 운영을 심의해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "spe_002",
+      "sourceAuditItemId": "sports_club",
+      "title": "학교스포츠클럽 운영 계획 및 전담교사 지정",
+      "shortTitle": "스포츠클럽 계획",
+      "description": "학교스포츠클럽 운영 계획을 수립하고 전담 교사를 지정하며, 계획에 학생 의견 수렴과 여학생 체육활동 활성화를 포함했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교스포츠클럽 운영 계획을 수립했는가?",
+        "학교스포츠클럽 전담 교사를 지정했는가?",
+        "학생 의견 수렴 및 여학생 체육활동 활성화 계획을 포함했는가?"
+      ],
+      "evidence": ["학교스포츠클럽 운영 계획", "전담 교사 지정 내부결재 공문"],
+      "completionCriteria": "운영 계획 수립·전담교사 지정·여학생 활성화 반영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 265: 학교스포츠클럽 운영 계획 수립 및 전담 교사 지정, 학생 의견 수렴 및 여학생 체육활동 활성화 포함 (★②)",
+      "monthReason": "학기 초 스포츠클럽 운영 계획 수립 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "spe_003",
+      "sourceAuditItemId": "club_record",
+      "title": "학교스포츠클럽 결과 NEIS·생기부 반영",
+      "shortTitle": "스포츠클럽 반영",
+      "description": "학교스포츠클럽 활동 결과를 NEIS 및 학교생활기록부에 정확히 반영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기말",
+      "recommendedMonth": 12,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교스포츠클럽 활동 결과를 NEIS에 반영했는가?",
+        "학교생활기록부에 정확히 반영했는가?"
+      ],
+      "evidence": ["NEIS 학교스포츠클럽 활동 자료", "학교생활기록부(스포츠클럽 활동)"],
+      "completionCriteria": "스포츠클럽 결과의 NEIS·생기부 반영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 265·268: 학교스포츠클럽 운영 결과 NEIS 및 학교생활기록부 반영 (★①,②)",
+      "monthReason": "학년말 생기부 기재 시점에 반영 여부를 점검하기 위해 12월 권장"
+    },
+    {
+      "templateTaskId": "spe_004",
+      "sourceAuditItemId": "paps",
+      "title": "학생건강체력평가제(PAPS) 운영",
+      "shortTitle": "PAPS 운영",
+      "description": "학생건강체력평가제(PAPS) 실시 계획을 수립하고 적합한 방법으로 측정·운영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "PAPS 실시 계획을 수립했는가?",
+        "PAPS를 적합한 방법으로 측정·운영했는가?",
+        "측정 결과를 관리하고 있는가?"
+      ],
+      "evidence": ["PAPS 실시 계획", "PAPS 측정 결과 자료"],
+      "completionCriteria": "PAPS 계획 수립과 적합한 측정·운영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 265: 학생건강체력평가제(PAPS) 실시 계획 수립·운영, 실시 방법 적합 (★①,②)",
+      "monthReason": "PAPS 측정이 이뤄지는 상반기에 계획·운영을 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "spe_005",
+      "sourceAuditItemId": "health_class",
+      "title": "저체력·비만 학생 건강체력교실",
+      "shortTitle": "건강체력교실",
+      "description": "PAPS 측정 결과 저체력 및 비만 판정 학생을 대상으로 건강체력교실을 운영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "저체력·비만 판정 학생을 파악했는가?",
+        "대상 학생을 위한 건강체력교실을 운영했는가?",
+        "운영 결과를 기록·관리하고 있는가?"
+      ],
+      "evidence": ["건강체력교실 운영 계획 및 결과", "PAPS 저체력·비만 판정 자료"],
+      "completionCriteria": "저체력·비만 학생 대상 건강체력교실 운영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 265·268: PAPS 측정 결과 저체력 및 비만 판정 학생 대상 건강체력교실 운영 (★①,②)",
+      "monthReason": "PAPS 측정 이후 하반기에 대상 학생 프로그램 운영을 점검하기 위해 9월 권장"
+    }
+  ]
+}

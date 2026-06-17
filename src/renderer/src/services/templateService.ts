@@ -1,5 +1,4 @@
 import templateIndexData from '@/data/templates/index.json'
-import privacyProtectionTemplateData from '@/data/templates/privacy_protection.v1.json'
 import type {
   DetailedTemplate,
   SchoolLevel as TemplateSchoolLevel,
@@ -21,6 +20,11 @@ const EMPTY_INDEX: TemplateIndex = {
   items: []
 }
 
+const templateModules = import.meta.glob<unknown>('@/data/templates/*.v1.json', {
+  eager: true,
+  import: 'default'
+})
+
 export interface CreateWorkInstanceResult {
   ok: boolean
   item: TemplateIndexItem | null
@@ -28,15 +32,26 @@ export interface CreateWorkInstanceResult {
   message: string
 }
 
-const DETAIL_TEMPLATES: Record<string, DetailedTemplate> = {
-  privacy_protection: privacyProtectionTemplateData as DetailedTemplate
-}
-
 function isTemplateIndex(value: unknown): value is TemplateIndex {
   if (!value || typeof value !== 'object') return false
   const maybe = value as Partial<TemplateIndex>
   return Array.isArray(maybe.items)
 }
+
+function isDetailedTemplate(value: unknown): value is DetailedTemplate {
+  if (!value || typeof value !== 'object') return false
+  const maybe = value as Partial<DetailedTemplate>
+  return typeof maybe.templateId === 'string' && Array.isArray(maybe.tasks)
+}
+
+const DETAIL_TEMPLATES: Record<string, DetailedTemplate> = Object.values(templateModules).reduce<
+  Record<string, DetailedTemplate>
+>((templates, moduleValue) => {
+  if (isDetailedTemplate(moduleValue)) {
+    templates[moduleValue.templateId] = moduleValue
+  }
+  return templates
+}, {})
 
 function normalizeText(value: string): string {
   return value.normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/\s+/g, '')

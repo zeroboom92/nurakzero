@@ -1,0 +1,160 @@
+{
+  "templateId": "school_competitions_awards",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "교내대회 운영 및 수상경력 관리",
+  "displayTitle": "교내대회·수상경력",
+  "description": "교내상 운영 계획과 대회 요강 공개, 교내대회 운영, 수상경력 학생부 입력과 기재 금지 준수를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "3",
+    "areaName": "교육과정·평가",
+    "itemCode": "3-3",
+    "itemName": "교내대회 운영 및 수상경력 관리"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["교내대회", "대회", "수상", "수상경력", "상장", "시상", "수상대장"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "3-3 교내대회 운영 및 수상경력 관리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 197·200의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "plan", "title": "교내상 운영 계획 수립", "sourceTables": [197] },
+    { "id": "announce", "title": "대회 요강 사전 공개", "sourceTables": [197] },
+    { "id": "operation", "title": "교내대회 운영 적정성", "sourceTables": [197] },
+    { "id": "record", "title": "수상경력 학생부 입력", "sourceTables": [197, 200] },
+    { "id": "prohibition", "title": "시상계획 외 입력 금지", "sourceTables": [197] }
+  ],
+  "legalReferences": [
+    "① 공교육 정상화 촉진 및 선행교육 규제에 관한 특별법 제8조 제3항 제2호",
+    "② 초·중등교육법 시행규칙 제21조",
+    "③ 학교생활기록 작성 및 관리 지침 제9조",
+    "④ 학교생활기록부 기재요령(교육부)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "sca_001",
+      "sourceAuditItemId": "plan",
+      "title": "교내상 운영 계획 수립",
+      "shortTitle": "교내상 운영계획",
+      "description": "학년 초 학교교육계획서에 교내상 운영 계획(수상명·시행 학기·참가 대상·수상 비율·담당 부서·공개 방식 등)을 포함해 수립했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회(2학기초 변경 가능)",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교교육계획서에 교내상 운영 계획을 포함했는가?",
+        "수상명·시행 학기·참가 대상·수상 비율·담당 부서·공개 방식을 명시했는가?",
+        "2학기 변경 시 학기 시작 후 30일 이내 학교장 결재·공개했는가?"
+      ],
+      "evidence": ["학교교육계획서(교내상 운영 계획)", "관련 내부결재 공문"],
+      "completionCriteria": "교내상 운영 계획의 학교교육계획서 포함과 필수 항목 명시를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 197: 학년 초 학교교육계획서에 교내상 운영 계획(수상명·시행 학기·참가 대상·수상 비율·담당 부서·공개 방식 등) 포함 (★②,③,④)",
+      "monthReason": "학년 초 학교교육계획서에 운영 계획을 포함해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "sca_002",
+      "sourceAuditItemId": "announce",
+      "title": "대회 요강 사전 공개",
+      "shortTitle": "대회 요강 공개",
+      "description": "교내대회가 공정하게 이루어지도록 대회 실시 이전에 대회 요강(시기·운영·심사 방법·수상 인원 등)을 공개했는지 확인한다.",
+      "taskType": "공개",
+      "cycle": "대회 실시 전",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "대회 실시 이전에 대회 요강을 공개했는가?",
+        "요강에 시기·운영·심사 방법·수상 인원 등을 포함했는가?"
+      ],
+      "evidence": ["대회 요강 공개 자료", "대회 관련 공문(계획)"],
+      "completionCriteria": "대회 실시 전 요강 공개와 필수 내용 포함을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 197: 대회 실시 이전에 대회 요강(시기·운영·심사 방법·수상 인원 등) 공개",
+      "monthReason": "교내대회 실시 전 사전 공개 시기를 고려해 4월 권장"
+    },
+    {
+      "templateTaskId": "sca_003",
+      "sourceAuditItemId": "operation",
+      "title": "교내대회 운영 적정성",
+      "shortTitle": "대회 운영",
+      "description": "학생이 배운 교육과정의 범위와 수준을 벗어난 내용을 출제·평가하는 대회를 실시하지 않는 등 교내대회를 적정하게 운영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "대회 실시 시",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "교육과정 범위·수준을 벗어난 대회를 실시하지 않았는가?",
+        "대회 운영·심사가 공정하게 이루어졌는가?"
+      ],
+      "evidence": ["대회 운영·결과 공문", "대회 심사 자료"],
+      "completionCriteria": "교육과정 범위 내 대회 운영과 공정성을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 197: 교육과정 범위·수준을 벗어난 대회 실시 불가, 교내대회 운영의 적정 (★①)",
+      "monthReason": "교내대회가 본격 운영되는 시기에 점검하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "sca_004",
+      "sourceAuditItemId": "record",
+      "title": "수상경력 학생부 입력",
+      "shortTitle": "수상경력 입력",
+      "description": "학교교육계획서의 교내상 운영 계획에 따라 실시한 교내상만 학교생활기록부에 기재하고, 운영 계획·대회 공문·수상명이 일치하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수상 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교교육계획서 운영 계획에 따라 실시한 교내상만 기재했는가?",
+        "운영 계획·대회 공문·수상명이 일치하는가?",
+        "수상경력 입력이 기재요령에 맞는가?"
+      ],
+      "evidence": ["학교생활기록부(수상경력)", "교내상 운영 계획", "대회 관련 공문(계획·결과)"],
+      "completionCriteria": "운영 계획에 따른 교내상 기재와 운영계획·공문·수상명 일치를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 197·200: 학교교육계획서 교내상 운영 계획에 따라 실시한 교내상만 기재, 운영 계획·공문·수상명 일치 (★②,③,④)",
+      "monthReason": "수상 발생·생기부 기재 시점에 점검하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "sca_005",
+      "sourceAuditItemId": "prohibition",
+      "title": "시상계획 외 입력 금지 준수",
+      "shortTitle": "입력 금지 준수",
+      "description": "시상계획이 있는 교내대회·행사의 준비 과정 및 참가 사실을 수상 여부와 관계없이 학교생활기록부 어떠한 항목에도 입력하지 않는지(단순 행사로 변경 기재 금지) 확인한다.",
+      "taskType": "점검",
+      "cycle": "수상 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "시상계획이 있는 대회·행사의 준비·참가 사실을 학생부 어느 항목에도 입력하지 않았는가?",
+        "단순 행사로 변경해 기재하지 않았는가?"
+      ],
+      "evidence": ["학교생활기록부 점검 자료", "교내상 운영 계획"],
+      "completionCriteria": "시상계획 대상의 준비·참가 사실 미기재를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 197: 시상계획이 있는 교내대회·행사의 준비 과정 및 참가 사실은 수상 여부와 관계없이 학교생활기록부 어떠한 항목에도 입력 불가(단순 행사로 변경 기재 금지)",
+      "monthReason": "생기부 기재 시점에 점검하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

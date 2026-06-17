@@ -1,0 +1,166 @@
+{
+  "templateId": "life_respect_dropout_prevention",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학생 생명존중교육 및 학업중단숙려제 운영",
+  "displayTitle": "생명존중교육·학업중단숙려제",
+  "description": "생명존중·자살예방교육, 위기관리위원회 운영, 자살(시도) 발생보고, 학업중단숙려제 운영을 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-5",
+    "itemName": "학생 생명존중교육 및 학업중단숙려제 운영"
+  },
+  "schoolLevels": ["초", "중", "고"],
+  "aliases": ["생명존중", "자살예방", "생명존중교육", "학업중단숙려제", "숙려제"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-5 학생 생명존중교육 및 학업중단숙려제 운영",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 235·238의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "student_education", "title": "학생 생명존중·자살예방교육 실시", "sourceTables": [235] },
+    { "id": "staff_training", "title": "교직원 자살예방·생명존중 연수", "sourceTables": [235] },
+    { "id": "crisis_committee", "title": "위기관리위원회 구성 및 운영", "sourceTables": [235] },
+    { "id": "incident_report", "title": "학생자살 및 자살시도자 발생보고 절차", "sourceTables": [235] },
+    { "id": "dropout_deliberation", "title": "학업중단숙려제 운영", "sourceTables": [235] }
+  ],
+  "legalReferences": [
+    "① 초·중등교육법 제28조",
+    "② 초·중등교육법 시행령 제9조·제54조",
+    "③ 학생자살예방대책 시행계획(교육부)",
+    "④ 국가안전관리집행계획(교육부)",
+    "⑤ 위기학생지원계획(전북특별자치도교육청)",
+    "⑥ 전북특별자치도교육청 학업중단 예방 및 교육지원 조례",
+    "⑦ 학업중단숙려제 기본 지침(전북특별자치도교육청)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "lrd_001",
+      "sourceAuditItemId": "student_education",
+      "title": "학생 생명존중·자살예방교육 실시",
+      "shortTitle": "학생 생명존중교육",
+      "description": "교육과정과 연계해 학생 생명존중 및 자살예방교육(사회정서교육)을 연 6시간 실시하고 결과를 보관하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연간 6시간",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생 생명존중·자살예방교육을 교육과정과 연계해 실시했는가?",
+        "연간 6시간 이상 실시했는가?",
+        "교육 실시 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["학생 자살예방교육 실시 계획", "교육 실시 결과 자료", "관련 내부결재 공문"],
+      "completionCriteria": "교육과정 연계 6시간 실시와 결과 보관을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 235: 학생 생명존중 및 자살예방교육(사회정서교육) 실시 - 교육과정 연계 6시간 (★③,⑤)",
+      "monthReason": "학기 초 연간 계획에 따라 교육을 시작·기록하기 위해 3월 권장"
+    },
+    {
+      "templateTaskId": "lrd_002",
+      "sourceAuditItemId": "staff_training",
+      "title": "교직원 자살예방·생명존중 연수",
+      "shortTitle": "교직원 연수",
+      "description": "교직원을 대상으로 자살예방 및 생명존중교육(사회정서교육) 연수를 연 6시간 실시하고 결과를 보관하는지 확인한다.",
+      "taskType": "연수",
+      "cycle": "연간 6시간",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "교직원 자살예방·생명존중 연수를 실시했는가?",
+        "연간 6시간 이상 실시했는가?",
+        "연수 결과 실적을 보관하고 있는가?"
+      ],
+      "evidence": ["교직원 자살예방교육(사회정서교육) 연수 실적", "관련 내부결재 공문"],
+      "completionCriteria": "교직원 연수 6시간 실시와 실적 보관을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 235: 교직원 자살예방 및 생명존중교육(사회정서교육) 연수 6시간",
+      "monthReason": "상반기 내 교직원 연수 실적을 확보하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "lrd_003",
+      "sourceAuditItemId": "crisis_committee",
+      "title": "위기관리위원회 구성 및 운영",
+      "shortTitle": "위기관리위원회",
+      "description": "위기관리위원회를 학교장(위원장)·교감·교사 등 5인 이상으로 구성하고 운영 계획을 수립했는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "위기관리위원회를 5인 이상으로 구성했는가?",
+        "학교장(위원장)·교감·교사 등으로 구성했는가?",
+        "위기관리위원회 운영 계획을 수립했는가?"
+      ],
+      "evidence": ["위기관리위원회 구성·운영 계획", "위원 구성 내부결재 공문"],
+      "completionCriteria": "위원 구성과 운영 계획 수립을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 235: 위기관리위원회 구성·운영 - 학교장(위원장)·교감·교사 등 5인 이상, 필요시 학부모·자문위원 포함 (★③,⑤)",
+      "monthReason": "학기 초 위원회를 구성·점검해 위기 상황에 대비하기 위해 3월 권장"
+    },
+    {
+      "templateTaskId": "lrd_004",
+      "sourceAuditItemId": "incident_report",
+      "title": "학생자살(시도) 발생보고 절차 준수",
+      "shortTitle": "발생보고 절차",
+      "description": "학생자살 및 자살시도 발생 시 단계별 보고(1차 유선 즉시, 2차 사안경위서 24시간 이내, 3차 사안보고서 7일 이내)를 준수했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "인지 즉시 1차 유선보고를 했는가?",
+        "24시간 이내 사안경위서(2차)를 전자문서로 보고했는가?",
+        "7일 이내 사안보고서(3차)를 보고했는가? (자살시도는 10일 이내)"
+      ],
+      "evidence": ["학생자살 사안 발생 시 관련 서류 일체", "교육(지원)청 보고 공문"],
+      "completionCriteria": "단계별 보고 시한 준수를 보고 기록으로 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 235: 학생자살 및 자살시도자 발생보고 절차 - 1차 유선 즉시, 2차 사안경위서 24시간 이내, 3차 사안보고서 7일 이내(자살시도 10일 이내) (★③,④,⑤)",
+      "monthReason": "사안 발생 시 시한 내 보고하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "lrd_005",
+      "sourceAuditItemId": "dropout_deliberation",
+      "title": "학업중단숙려제 운영",
+      "shortTitle": "학업중단숙려제",
+      "description": "학교부적응·학업중단 위기 학생 예방을 위한 학업중단숙려제 운영 계획을 수립하고 절차에 따라 운영하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학업중단숙려제 운영 계획을 수립했는가?",
+        "학업중단 위기 학생에게 숙려 기회를 제공했는가?",
+        "운영 결과를 기록·보관하고 있는가?"
+      ],
+      "evidence": ["학업중단숙려제 운영 계획", "숙려제 운영 결과 자료", "관련 내부결재 공문"],
+      "completionCriteria": "숙려제 운영 계획과 대상 학생 운영 결과를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 235: 학교부적응 및 학업중단학생 예방 - 학업중단숙려제 운영 (★③,⑥,⑦)",
+      "monthReason": "학업중단이 늘 수 있는 하반기 전 운영 체계를 점검하기 위해 9월 권장"
+    }
+  ]
+}

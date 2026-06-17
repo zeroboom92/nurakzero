@@ -1,0 +1,159 @@
+{
+  "templateId": "kindergarten_life_record",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "유치원생활기록부 작성·정정·관리",
+  "displayTitle": "유치원생활기록부",
+  "description": "유치원생활기록부의 인적사항·출결·신체발달 입력, 건강검진 기록, 정정 절차를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "1",
+    "areaName": "유치원 학사관리",
+    "itemCode": "1-3",
+    "itemName": "유치원생활기록부 작성·정정·관리"
+  },
+  "schoolLevels": ["유"],
+  "aliases": ["유치원생활기록부", "생활기록부", "유치원 생기부", "생활기록부 정정"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "1-3 유치원생활기록부 작성·정정·관리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 125·128의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "personal", "title": "인적사항 입력 지침 준수", "sourceTables": [125] },
+    { "id": "attendance", "title": "출결사항 입력 지침 준수", "sourceTables": [125] },
+    { "id": "physical", "title": "신체발달상황 입력 지침 준수", "sourceTables": [125] },
+    { "id": "health", "title": "건강검진 실시 및 기록", "sourceTables": [125] },
+    { "id": "correction", "title": "유치원생활기록부 정정 절차", "sourceTables": [125, 128] }
+  ],
+  "legalReferences": [
+    "① 유아교육법 제14조·제17조",
+    "② 유치원생활기록부 작성 및 관리 지침(교육부 고시 제2023-4호)",
+    "③ 2024학년도 유치원생활기록부 기재 요령(교육부)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "klr_001",
+      "sourceAuditItemId": "personal",
+      "title": "인적사항 입력 지침 준수",
+      "shortTitle": "인적사항 입력",
+      "description": "유치원생활기록부 인적사항을 기재 지침에 맞게 입력했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기 초",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "인적사항을 기재 지침에 맞게 입력했는가?",
+        "변경 시 증빙에 따라 정정했는가?"
+      ],
+      "evidence": ["유치원생활기록부(인적사항)", "관련 증빙자료"],
+      "completionCriteria": "인적사항 입력 지침 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 125: 인적사항 입력 지침 준수 (★①,③,④)",
+      "monthReason": "학기 초 신입원아 인적사항 입력 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "klr_002",
+      "sourceAuditItemId": "attendance",
+      "title": "출결사항 입력 지침 준수",
+      "shortTitle": "출결사항 입력",
+      "description": "수업일수·출석일수·결석일수·특기사항 등 출결사항을 기재 지침에 맞게 입력했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기별",
+      "recommendedMonth": 6,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "수업일수·출석일수·결석일수를 정확히 입력했는가?",
+        "출결 특기사항을 지침에 맞게 입력했는가?"
+      ],
+      "evidence": ["유치원생활기록부(출결상황)", "출결 증빙자료"],
+      "completionCriteria": "출결사항 입력 지침 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 125: 출결사항 입력 지침 준수 - 수업일수·출석일수·결석일수·특기사항 등 (★①,③,④)",
+      "monthReason": "1학기 출결 입력 상태를 학기말 전 점검하기 위해 6월 권장"
+    },
+    {
+      "templateTaskId": "klr_003",
+      "sourceAuditItemId": "physical",
+      "title": "신체발달상황 입력 지침 준수",
+      "shortTitle": "신체발달 입력",
+      "description": "신체발달상황을 기재 지침에 맞게 기록했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "신체발달상황을 기재 지침에 맞게 기록했는가?",
+        "측정 결과를 정확히 입력했는가?"
+      ],
+      "evidence": ["유치원생활기록부(신체발달상황)", "측정 결과 자료"],
+      "completionCriteria": "신체발달상황 입력 지침 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 125: 신체발달상황 기록 지침 준수 (★①,②,③,④)",
+      "monthReason": "하반기 신체발달 측정·기록 시기에 맞춰 9월 권장"
+    },
+    {
+      "templateTaskId": "klr_004",
+      "sourceAuditItemId": "health",
+      "title": "건강검진 실시 및 기록",
+      "shortTitle": "건강검진 기록",
+      "description": "유아에 대해 1년에 한 번 이상 건강검진을 실시하고 그 결과를 생활기록부에 기록·관리하는지 확인한다(보호자 제출·행정정보 공동이용 포함).",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "유아에 대해 1년에 한 번 이상 건강검진을 실시했는가?",
+        "건강검진 결과를 생활기록부에 기록·관리했는가?",
+        "보호자 제출 검사 결과나 행정정보 공동이용으로 처리한 경우 적정하게 관리했는가?"
+      ],
+      "evidence": ["유치원생활기록부(건강검진)", "건강검진 결과 자료"],
+      "completionCriteria": "건강검진 실시와 결과 기록·관리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 125: 건강검진 기록 지침 준수 - 1년 1회 이상 건강검진 실시 및 결과 생활기록부 기록·관리 (★①,②,③)",
+      "monthReason": "건강검진이 이루어지는 하반기에 결과 기록을 점검하기 위해 9월 권장"
+    },
+    {
+      "templateTaskId": "klr_005",
+      "sourceAuditItemId": "correction",
+      "title": "유치원생활기록부 정정 절차 준수",
+      "shortTitle": "정정 절차",
+      "description": "부득이한 정정의 경우 객관적 증빙자료를 근거로 결재 절차를 거쳐 정정하고 증빙자료를 보관하는지 확인한다(당해 학년도 입력 오류는 즉시 수정 가능).",
+      "taskType": "점검",
+      "cycle": "정정 사유 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "부득이한 정정 시 객관적 증빙자료를 근거로 정정했는가?",
+        "정정 결재 절차를 준수했는가?",
+        "증빙자료를 보관하고 있는가?"
+      ],
+      "evidence": ["정정대장", "정정 증빙자료", "관련 내부결재 공문"],
+      "completionCriteria": "정정 증빙·결재 절차와 증빙자료 보관을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 125·128: 유치원생활기록부 정정 절차 준수 - 결재 절차, 객관적 증빙자료를 근거로 정정 및 보관 (★①,③,④)",
+      "monthReason": "정정은 사유 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

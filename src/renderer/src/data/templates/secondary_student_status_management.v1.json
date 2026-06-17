@@ -1,0 +1,191 @@
+{
+  "templateId": "secondary_student_status_management",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "중등 학적 관리",
+  "displayTitle": "중등 학적 관리",
+  "description": "중·고등학교 학적(전입·전출·재입학·편입학·유예·면제·휴학·자퇴·퇴학)과 의무교육관리위원회 운영, 조기진급·진급·졸업 처리를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "2",
+    "areaName": "초·중등 학사관리",
+    "itemCode": "2-3-2",
+    "itemName": "중등 학적 관리"
+  },
+  "schoolLevels": ["중", "고"],
+  "aliases": ["중등 학적", "학적", "전입", "전출", "재입학", "편입학", "자퇴", "퇴학"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "2-3-2 중등 학적 관리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 156·159의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "edu_committee", "title": "의무교육관리위원회 구성·운영(중학교)", "sourceTables": [156] },
+    { "id": "record_management", "title": "학생 인적사항 및 학적 관리", "sourceTables": [156, 159] },
+    { "id": "transfer", "title": "전·편입학·재입학·전출 처리", "sourceTables": [156] },
+    { "id": "deferral", "title": "유예·면제 및 정원외 학적 관리(중학교)", "sourceTables": [156] },
+    { "id": "highschool_leave", "title": "고등학교 휴학·자퇴·퇴학 처리", "sourceTables": [156] },
+    { "id": "promotion", "title": "조기진급·진급·졸업 규정 준수", "sourceTables": [156] }
+  ],
+  "legalReferences": [
+    "① 초·중등교육법 제12조·제25조·제27조·제47조",
+    "② 초·중등교육법 시행령 제25조의2",
+    "③ 학교생활기록 작성 및 관리지침 제7조(교육부)",
+    "④ 학교생활기록부 기재요령(교육부)",
+    "⑤ 중·고등학교 학업성적관리 시행지침(전북특별자치도교육청)",
+    "⑥ 전·편입학 및 재입학 업무 시행 계획(전북특별자치도교육청)",
+    "⑦ 의무교육단계 취학 이행 및 독려를 위한 지침(전북특별자치도교육청 고시)",
+    "⑧ 전북특별자치도교육청 조기진급 등에 관한 규정"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "sss_001",
+      "sourceAuditItemId": "edu_committee",
+      "title": "의무교육관리위원회 구성·운영(중학교)",
+      "shortTitle": "의무교육관리위원회",
+      "description": "중학교의 경우 규정에 따라 의무교육관리위원회를 구성하고, 면제·유예·장기결석에 따른 정원 외 학적 관리를 위해 절차에 맞게 운영하는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "(중학교) 규정에 따라 의무교육관리위원회를 구성했는가?",
+        "면제·유예·장기결석 정원 외 학적 관리를 위한 운영 체계를 갖췄는가?",
+        "구성·운영 내부결재와 회의록을 갖추고 있는가?"
+      ],
+      "evidence": ["의무교육관리위원회 구성 내부결재 공문", "위원회 회의록"],
+      "completionCriteria": "(중학교) 위원회 구성과 운영 절차를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 의무교육관리위원회 구성의 적정 - 중학교 면제·유예·장기결석 정원 외 학적 관리 (★②,⑦)",
+      "monthReason": "학기 초 위원회를 구성해 유예·면제 심의에 대비하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "sss_002",
+      "sourceAuditItemId": "record_management",
+      "title": "학생 인적사항 및 학적 관리",
+      "shortTitle": "인적사항·학적",
+      "description": "학생 인적사항과 학적이 정확하게 관리되고 변경 시 증빙서류·정정 절차가 준수되는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시 및 학기별",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생 인적사항 및 학적이 정확하게 관리되고 있는가?",
+        "변경 시 증빙서류를 첨부하고 정정 절차를 준수했는가?"
+      ],
+      "evidence": ["학교생활기록부(인적·학적사항)", "정정대장", "인적사항 변경 증빙서류"],
+      "completionCriteria": "인적사항·학적 관리 정확성과 변경 증빙·정정 절차를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 학생 인적사항 및 학적 관리 적정 (★①,③,④)",
+      "monthReason": "신학기 학적 정비 후 인적사항 관리 상태를 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "sss_003",
+      "sourceAuditItemId": "transfer",
+      "title": "전·편입학·재입학·전출 처리",
+      "shortTitle": "전·편입학 처리",
+      "description": "전입·전출, 편입학, 재입학 처리가 전학 지침과 업무 시행계획에 따라 적정하게 이루어졌는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "전입·전출 처리가 전학 지침을 준수했는가?",
+        "편입학·재입학 처리가 업무 시행계획에 따라 이루어졌는가?",
+        "관련 증빙서류를 구비했는가?"
+      ],
+      "evidence": ["전·편입학·재입학 처리 서류", "전출 관련 서류", "관련 내부결재 공문"],
+      "completionCriteria": "전입·전출·편입학·재입학 처리 절차와 증빙을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 입학·재취학·편입학·재입학 처리 적정, 전입 및 전출 학생 전학 지침 준수 (★①,④,⑤,⑥)",
+      "monthReason": "전·편입학은 사유 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "sss_004",
+      "sourceAuditItemId": "deferral",
+      "title": "유예·면제 및 정원외 학적 관리(중학교)",
+      "shortTitle": "유예·면제 처리",
+      "description": "(중학교) 유예·면제 시 의무교육관리위원회를 개최하고 절차를 준수했으며, 국외 유학생 출국 시 학적 처리가 적정한지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "(중학교) 유예·면제 시 의무교육관리위원회를 개최했는가?",
+        "유예·면제 절차와 사유가 적정한가?",
+        "국외 유학생 출국 시 학적 처리가 적정한가?"
+      ],
+      "evidence": ["의무교육관리위원회 회의록", "유예·면제 신청·증빙서류", "국외 유학생 학적 처리 서류"],
+      "completionCriteria": "(중학교) 위원회 개최·절차 준수와 국외 유학생 학적 처리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 중학생 유예·면제 시 의무교육관리위원회 개최 및 절차 준수, 국외 유학생 출국 시 학적 처리 적정 (★②,⑥,⑦)",
+      "monthReason": "유예·면제는 사유 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "sss_005",
+      "sourceAuditItemId": "highschool_leave",
+      "title": "고등학교 휴학·자퇴·퇴학 처리",
+      "shortTitle": "휴학·자퇴·퇴학",
+      "description": "(고등학교) 휴학·자퇴·퇴학 처리가 규정과 절차에 따라 적정하게 이루어졌는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "(고등학교) 휴학·자퇴·퇴학 처리가 규정에 따라 이루어졌는가?",
+        "처리 절차와 증빙서류를 구비했는가?"
+      ],
+      "evidence": ["휴학·자퇴·퇴학 처리 서류", "관련 내부결재 공문"],
+      "completionCriteria": "(고등학교) 휴학·자퇴·퇴학 처리 절차와 증빙을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 고등학교 휴학·자퇴·퇴학 학생 처리의 적정 (★①,④,⑤)",
+      "monthReason": "휴학·자퇴·퇴학은 사유 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "sss_006",
+      "sourceAuditItemId": "promotion",
+      "title": "조기진급·진급·졸업 규정 준수",
+      "shortTitle": "진급·졸업 규정",
+      "description": "조기진급 등에 관한 규정과 교육청 지침을 준수하고, 진급 및 졸업 처리가 규정에 맞게 이루어졌는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학년말",
+      "recommendedMonth": 12,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "조기진급 등에 관한 규정과 교육청 지침을 준수했는가?",
+        "진급 및 졸업 처리가 규정에 맞는가?",
+        "관련 심의·결재 자료를 갖추고 있는가?"
+      ],
+      "evidence": ["진급·졸업 사정 관련 서류", "조기진급 관련 내부결재 공문", "관련 회의록"],
+      "completionCriteria": "조기진급 규정 준수와 진급·졸업 처리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 156: 조기진급 등에 관한 규정 및 교육청 지침 준수, 진급 및 졸업 규정 준수 (★①,④,⑤,⑧)",
+      "monthReason": "학년말 진급·졸업 사정 시점에 점검해야 하므로 12월 권장"
+    }
+  ]
+}

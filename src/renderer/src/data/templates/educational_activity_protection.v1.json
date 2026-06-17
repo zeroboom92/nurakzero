@@ -1,0 +1,164 @@
+{
+  "templateId": "educational_activity_protection",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학교교육활동 보호",
+  "displayTitle": "학교교육활동 보호",
+  "description": "학교교권보호위원회 구성·운영, 교육활동 침해 예방교육과 사안처리 절차를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "4",
+    "areaName": "교원인사관리·교육활동보호",
+    "itemCode": "4-2",
+    "itemName": "학교교육활동보호"
+  },
+  "schoolLevels": ["유", "초", "중", "고", "특"],
+  "aliases": ["교육활동보호", "교권보호", "교육활동 침해", "교권", "학교교권보호위원회"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "4-2 학교교육활동보호",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 207의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "committee_rule", "title": "학교교권보호위원회 운영 규칙 제정", "sourceTables": [207] },
+    { "id": "committee_composition", "title": "학교교권보호위원회 구성·운영의 적정", "sourceTables": [207] },
+    { "id": "prevention_education", "title": "교육활동 침해행위 예방교육 실시", "sourceTables": [207] },
+    { "id": "case_handling", "title": "교육활동 침해 사안처리 절차 준수", "sourceTables": [207] }
+  ],
+  "legalReferences": [
+    "① 교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 제15조",
+    "② 교원의 지위 향상 및 교육활동 보호를 위한 특별법 제16조의3",
+    "③ 교원의 지위 향상 및 교육활동 보호를 위한 특별법 제15조",
+    "④ 교원의 지위 향상 및 교육활동 보호를 위한 특별법 제16조",
+    "⑤ 교원의 지위 향상 및 교육활동 보호를 위한 특별법 제25조",
+    "⑥ 전북특별자치도교육청 교육활동보호 매뉴얼"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "eap_001",
+      "sourceAuditItemId": "committee_rule",
+      "title": "학교교권보호위원회 운영 규칙 제정",
+      "shortTitle": "운영 규칙 제정",
+      "description": "도교육청 표준안을 참고해 학교교권보호위원회 운영 규칙을 학교규칙으로 제정하고 학교운영위원회 심의를 거쳤는지 확인한다.",
+      "taskType": "규정",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교교권보호위원회 운영 규칙을 학교규칙으로 제정했는가?",
+        "도교육청 표준안을 참고하여 제정했는가?",
+        "학교운영위원회 심의를 통과했는가?"
+      ],
+      "evidence": ["학교교권보호위원회 운영 규정", "학교운영위원회 심의 회의록", "규정 제·개정 내부결재 공문"],
+      "completionCriteria": "운영 규칙을 제정하고 학교운영위원회 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 207: 학교교권보호위원회 운영 규칙 제정(도교육청 표준안 참고, 학교운영위원회 심의 통과 필요) (★①)",
+      "monthReason": "학기 초에 위원회 운영 기준 규칙부터 정비해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "eap_002",
+      "sourceAuditItemId": "committee_composition",
+      "title": "학교교권보호위원회 구성의 적정성 점검",
+      "shortTitle": "위원회 구성 적정",
+      "description": "위원회를 5인 이상 10인 이하로 구성하고, 교원 위원이 전체의 1/2을 넘지 않으며, 위촉위원 임기(2년)·위원 구성·학교장 제외 요건을 충족하는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회 및 위원 교체 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "위원을 5인 이상 10인 이하로 구성했는가?",
+        "교원 위원이 전체 인원의 1/2을 초과하지 않는가?",
+        "위촉위원(교원·학부모·변호사·경찰·교육전문가 등)의 임기를 2년으로 운영하는가?",
+        "위원은 학교장이 임명·위촉하되 학교장은 위원에서 제외했는가?"
+      ],
+      "evidence": ["학교교권보호위원회 위원 구성 내부결재 공문", "위원 명단", "학교교권보호위원회 운영 규정"],
+      "completionCriteria": "위원 구성 내부결재와 명단을 확인해 인원·교원비율·임기·학교장 제외 요건을 모두 충족하면 완료 처리한다.",
+      "sourceBasis": "원본 표 207: 학교교권보호위원회 구성·운영의 적정 - 5인 이상 10인 이하, 교원 위원 1/2 초과 불가, 위촉위원 임기 2년, 학교장은 위원에서 제외",
+      "monthReason": "위원회 구성은 학기 초 위원 위촉 시점에 점검하는 것이 적절하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "eap_003",
+      "sourceAuditItemId": "prevention_education",
+      "title": "교육활동 침해행위 예방교육 실시",
+      "shortTitle": "침해 예방교육",
+      "description": "학생·학생의 보호자·교직원을 대상으로 교육활동 침해행위 예방교육을 연 1회 이상 실시하고 결과 증빙을 보관하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연 1회 이상",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생·보호자·교직원을 대상으로 예방교육을 실시했는가?",
+        "연 1회 이상 실시했는가?",
+        "교육 계획과 실시 결과(등록부·내부결재)를 보관하고 있는가?"
+      ],
+      "evidence": ["교육활동 침해행위 예방교육 계획", "예방교육 실시 결과 등록부", "예방교육 실시 내부결재 공문"],
+      "completionCriteria": "대상별 예방교육을 연 1회 이상 실시하고 결과 증빙을 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 207: 교육활동 침해행위 예방교육 실시(학생·학생의 보호자·교직원 대상 연 1회 이상) (★②)",
+      "monthReason": "학기 초 업무 정리 후 상반기 안에 예방교육 증빙을 확보하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "eap_004",
+      "sourceAuditItemId": "case_handling",
+      "title": "교육활동 침해 사안처리 절차 준수",
+      "shortTitle": "사안처리 절차",
+      "description": "교육활동 침해 사안 발생 시 신고·심의·처리 절차를 규정대로 준수하고 결과를 보고·기록했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "사안 발생 시 신고·심의·처리 절차를 규정대로 준수했는가?",
+        "학교교권보호위원회 심의 및 결과 보고가 이루어졌는가?",
+        "처리 결과를 기록·보관하고 있는가?"
+      ],
+      "evidence": ["사안처리 결과 보고 공문", "학교교권보호위원회 회의록"],
+      "completionCriteria": "사안별 처리 절차 준수와 위원회 심의·보고 기록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 207: 교육활동 침해 사안처리 절차 준수 (★③,④,⑤,⑥)",
+      "monthReason": "사안 발생 시점에 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "eap_005",
+      "sourceAuditItemId": "case_handling",
+      "title": "피해교원 보호조치 이행",
+      "shortTitle": "피해교원 보호조치",
+      "description": "교육활동 침해 피해교원에게 특별휴가·병가·공무상병가·병원 치료 등 필요한 보호조치를 적정하게 지원했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "피해교원에게 필요한 보호조치(특별휴가·병가·공무상병가 등)를 지원했는가?",
+        "보호조치 결정·이행 내역을 기록·보관하고 있는가?"
+      ],
+      "evidence": ["피해교원 보호조치 결정 자료", "보호조치 관련 내부결재 공문"],
+      "completionCriteria": "피해교원 보호조치 결정과 이행 내역을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 207: 피해교원의 보호조치 - 필요시 특별휴가(5일), 병가, 병원 치료, 공무상병가(6일) 등",
+      "monthReason": "피해 발생 시점에 즉시 지원하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

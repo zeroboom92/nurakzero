@@ -33,6 +33,7 @@ export interface TemplateIndex {
 
 export interface DetailedTemplateTask {
   templateTaskId: string
+  sourceAuditItemId?: string
   title: string
   shortTitle?: string
   description: string
@@ -46,10 +47,17 @@ export interface DetailedTemplateTask {
   isAuditFocus?: boolean
   defaultStatus?: string
   checkQuestions?: string[]
+  requiredNoticeItems?: string[]
   evidence: string[]
   completionCriteria?: string
   sourceBasis?: string
   monthReason?: string
+}
+
+export interface SourceAuditItem {
+  id: string
+  title: string
+  sourceTables?: number[]
 }
 
 export interface DetailedTemplate {
@@ -74,6 +82,7 @@ export interface DetailedTemplate {
     sourceType: string
     note: string
   }
+  sourceAuditItems?: SourceAuditItem[]
   legalReferences: string[]
   tasks: DetailedTemplateTask[]
 }

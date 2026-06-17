@@ -1,0 +1,190 @@
+{
+  "templateId": "secondary_student_assessment",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "중등 학생평가",
+  "displayTitle": "중등 학생평가",
+  "description": "학업성적관리위원회 운영, 평가계획과 연수, 정기고사 출제·관리, 평가 점수·채점, 부정행위 예방, 이의신청을 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "3",
+    "areaName": "교육과정·평가",
+    "itemCode": "3-2-2",
+    "itemName": "중등 학생평가"
+  },
+  "schoolLevels": ["중", "고"],
+  "aliases": ["학생평가", "중등 평가", "지필평가", "수행평가", "학업성적관리", "성적처리"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "3-2-2 중등 학생평가",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 191·195의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "committee", "title": "학업성적관리위원회·교과협의회 구성·운영", "sourceTables": [191] },
+    { "id": "plan", "title": "평가계획 수립 및 교직원 연수", "sourceTables": [191] },
+    { "id": "exam_management", "title": "정기고사 출제·관리", "sourceTables": [191, 195] },
+    { "id": "scoring", "title": "평가 점수 및 채점 적정성", "sourceTables": [191, 195] },
+    { "id": "misconduct", "title": "부정행위 예방 및 처리", "sourceTables": [191] },
+    { "id": "objection", "title": "이의신청 기간 운영", "sourceTables": [191] }
+  ],
+  "legalReferences": [
+    "① 초·중등교육법 제9조·제25조",
+    "② 공교육 정상화 촉진 및 선행교육 규제에 관한 특별법 제8조",
+    "③ 초·중등교육법 시행령 제10조",
+    "④ 초·중등교육법 시행규칙 제24조",
+    "⑤ 학교생활기록 작성 및 관리 지침 제15조·별표9(교육부)",
+    "⑥ 학교생활기록부 기재요령(교육부)",
+    "⑦ 중·고등학교 학업성적관리 시행지침(전북특별자치도교육청)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "ssa_001",
+      "sourceAuditItemId": "committee",
+      "title": "학업성적관리위원회·교과협의회 구성·운영",
+      "shortTitle": "성적관리위원회",
+      "description": "학업성적관리위원회와 교과협의회(소규모 학교는 학년협의회)를 구성·운영하고 학업성적관리규정 제·개정, 평가계획, 보안관리 등 주요 사항을 심의하는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회 및 학기별",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학업성적관리위원회와 교과협의회(학년협의회)를 구성·운영했는가?",
+        "학업성적관리규정 제·개정을 심의했는가?",
+        "평가계획·보안관리 계획·생기부 기재 방법 등 주요 사항을 심의했는가?"
+      ],
+      "evidence": ["학업성적관리위원회 회의록", "교과협의회 회의록", "학업성적관리규정"],
+      "completionCriteria": "위원회·교과협의회 구성과 주요 사항 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191: 학업성적관리위원회 및 교과협의회 구성·운영, 주요 심의 사항(학업성적관리규정 제·개정, 교과별 교수학습평가계획, 보안관리 계획, 지필·수행평가 시행계획, 생기부 기재 방법·정정 등) (★④,⑤,⑥,⑦)",
+      "monthReason": "학기 초 평가 운영 기준과 계획을 심의해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "ssa_002",
+      "sourceAuditItemId": "plan",
+      "title": "평가계획 수립 및 교직원 연수",
+      "shortTitle": "평가계획·연수",
+      "description": "지필평가 시행계획 등 평가계획을 수립하고 교직원을 대상으로 평가 관련 연수를 실시했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "학기 초",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "지필평가 시행계획 등 평가계획을 수립했는가?",
+        "교직원을 대상으로 평가 관련 연수를 실시했는가?",
+        "연수 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["지필평가 시행계획", "교직원 평가 연수 자료"],
+      "completionCriteria": "평가계획 수립과 교직원 연수 실시를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191: 지필평가 시행계획 수립 및 교직원 대상 연수 (★⑤,⑦)",
+      "monthReason": "학기 초 평가계획 수립·연수 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "ssa_003",
+      "sourceAuditItemId": "exam_management",
+      "title": "정기고사 출제·관리 적정성",
+      "shortTitle": "고사 출제·관리",
+      "description": "정기고사 진행 매뉴얼을 준수하고 고사원안·문항정보표·서답형 채점기준표·문항오류 최소화 점검표를 적정하게 작성하며 단계별 보안을 관리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "고사별 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "정기고사 진행 매뉴얼을 준수했는가?",
+        "고사원안·문항정보표·서답형 채점기준표·문항오류 점검표를 작성했는가?",
+        "학업성적 단계별 보안을 관리했는가?"
+      ],
+      "evidence": ["고사원안 및 문항정보표", "서답형 채점기준표", "문항오류 최소화 점검표", "보안관리 자료"],
+      "completionCriteria": "고사 진행 매뉴얼 준수와 출제·보안 관리 서류를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191·195: 정기고사 진행 매뉴얼 준수, 고사원안·문항정보표·서답형 채점 기준표·문항 오류 최소화 점검표 작성 (★⑤,⑦)",
+      "monthReason": "정기고사 시점마다 출제·보안을 점검하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "ssa_004",
+      "sourceAuditItemId": "scoring",
+      "title": "평가 점수 및 채점 적정성",
+      "shortTitle": "점수·채점",
+      "description": "지필평가·수행평가 점수가 적정하게 부여되고(수행평가 배점 기준 준수) 채점이 정확하게 이루어졌는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "고사별 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "지필평가·수행평가 점수가 적정하게 부여되었는가?",
+        "수행평가 배점 기준에 따라 점수를 부여했는가?",
+        "채점이 정확하게 이루어졌는가?"
+      ],
+      "evidence": ["지필·수행평가 점수 자료", "수행평가 배점 기준", "채점 결과 자료"],
+      "completionCriteria": "점수 부여의 적정성과 채점 정확성을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191·195: 지필평가·수행평가 점수의 적정(수행평가 배점 기준 점수 부여), 채점의 정확성 (★⑤,⑦)",
+      "monthReason": "고사별 채점·점수 산출 시점에 점검하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "ssa_005",
+      "sourceAuditItemId": "misconduct",
+      "title": "부정행위 예방 및 처리",
+      "shortTitle": "부정행위 처리",
+      "description": "부정행위 예방 대책을 마련하고 부정행위 발생 시 처리가 규정에 맞게 이루어지는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "고사별 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "부정행위 예방 대책을 마련했는가?",
+        "부정행위자 처리가 규정에 맞게 이루어졌는가?"
+      ],
+      "evidence": ["부정행위 예방 대책 자료", "부정행위 처리 관련 서류"],
+      "completionCriteria": "부정행위 예방 대책과 처리 절차 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191: 부정행위 예방 대책 및 부정행위자 처리의 적정 (★⑤,⑦)",
+      "monthReason": "고사별로 대비·처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "ssa_006",
+      "sourceAuditItemId": "objection",
+      "title": "이의신청 기간 운영",
+      "shortTitle": "이의신청 운영",
+      "description": "지필평가 및 수행평가에 대한 이의신청 기간을 운영하고 처리 결과를 관리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "고사별",
+      "recommendedMonth": 12,
+      "recommendedDay": 31,
+      "priority": "low",
+      "riskLevel": "하",
+      "isCore": false,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "지필·수행평가 이의신청 기간을 운영했는가?",
+        "이의신청 처리 결과를 관리하고 있는가?"
+      ],
+      "evidence": ["이의신청 안내 및 접수 자료", "이의신청 처리 결과 자료"],
+      "completionCriteria": "이의신청 기간 운영과 처리 결과 관리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 191: 지필평가 및 수행평가 이의신청 기간 운영",
+      "monthReason": "2학기 기말 평가 후 이의신청 운영을 점검하기 위해 12월 권장"
+    }
+  ]
+}

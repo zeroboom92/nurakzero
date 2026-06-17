@@ -1,0 +1,166 @@
+{
+  "templateId": "student_athlete_management",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학생선수 운영",
+  "displayTitle": "학생선수 운영",
+  "description": "학교운동부 운영 계획과 학생선수 학습권 보장, 합숙훈련 근절, 폭력·안전 예방교육, 운영경비·후원금 관리를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "7",
+    "areaName": "체육·보건 교육",
+    "itemCode": "7-2",
+    "itemName": "학생선수 운영"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["학생선수", "운동부", "학교운동부", "최저학력", "학생선수 관리"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "7-2 학생선수 운영",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 270·274의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "operation_plan", "title": "학교운동부 운영 계획 수립 및 학교운영위원회 심의", "sourceTables": [270] },
+    { "id": "learning_right", "title": "학생선수 학습권 보장", "sourceTables": [270, 274] },
+    { "id": "training_control", "title": "상시 합숙훈련 근절", "sourceTables": [270] },
+    { "id": "safety_education", "title": "학생선수 (성)폭력 및 안전예방교육", "sourceTables": [270, 274] },
+    { "id": "finance_disclosure", "title": "운영경비·후원금 학교회계 편입 및 공개", "sourceTables": [270] }
+  ],
+  "legalReferences": [
+    "① 교육기본법 제3조·제4조·제12조",
+    "② 초·중등교육법 제6조·제30조~제33조 및 같은 법 시행령 제60조",
+    "③ 학교체육진흥법 제6조 제1항 제4호·제11조·제16조",
+    "④ 전북특별자치도 도립학교 운영위원회 설치·운영 조례",
+    "⑤ 학교폭력예방 및 대책에 관한 법률 제15조",
+    "⑥ 학생선수 출결관리 매뉴얼(2023. 2. 28.)",
+    "⑦ 학교체육 주요업무계획(전북특별자치도교육청)",
+    "⑧ 학교운동부지도자 관리 지침"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "sam_001",
+      "sourceAuditItemId": "operation_plan",
+      "title": "학교운동부 운영 계획 수립 및 심의",
+      "shortTitle": "운영 계획 수립",
+      "description": "학교운동부 운영 계획을 별도 또는 학교교육계획에 포함해 수립하고, 관련 법령 명시사항을 반영해 학교운영위원회 심의를 거쳤는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학교운동부 운영 계획을 수립했는가?",
+        "관련 법령 명시사항(최저학력·합숙훈련 근절·후원금 등)을 반영했는가?",
+        "학교운영위원회 심의를 거쳤는가?"
+      ],
+      "evidence": ["학교운동부 운영 계획", "학교운영위원회 회의록", "학교체육소위원회 회의록"],
+      "completionCriteria": "운영 계획 수립과 법령 반영·학교운영위원회 심의를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 270: 학교운동부 운영 계획 수립(별도 또는 학교교육계획 포함) 및 학교운영위원회 심의, 관련 법령 명시사항 반영 (★②)",
+      "monthReason": "학기 초 운동부 운영 계획을 수립·심의해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "sam_002",
+      "sourceAuditItemId": "learning_right",
+      "title": "학생선수 학습권 보장",
+      "shortTitle": "학습권 보장",
+      "description": "출석인정결석 허용일수 준수, 최저학력제 운영, 기초학력보장 프로그램 운영 등 학생선수 학습권 보장 사항을 이행하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "학기별",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "출석인정결석 허용일수를 준수하는가?",
+        "최저학력제를 운영하고 미달 학생을 관리하는가?",
+        "기초학력보장 프로그램을 운영하는가?"
+      ],
+      "evidence": ["학교운동부 운영 계획(최저학력제 관련)", "학생선수 출결 관리 자료", "기초학력보장 프로그램 운영 자료"],
+      "completionCriteria": "출석인정결석 준수·최저학력제·기초학력 프로그램 운영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 270·274: 학생선수 학습권 보장 - 출석인정결석 허용일수 준수, 최저학력제 운영, 기초학력보장 프로그램 운영 (★②,③,⑥,⑦)",
+      "monthReason": "1학기 출결·학력 관리 상태를 상반기 중 점검하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "sam_003",
+      "sourceAuditItemId": "training_control",
+      "title": "상시 합숙훈련 근절",
+      "shortTitle": "합숙훈련 근절",
+      "description": "상시 합숙(학습)훈련이 이루어지지 않도록 관리하고, 훈련계획이 학습권을 침해하지 않는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "상시 합숙훈련을 운영하지 않는가?",
+        "훈련계획(전지훈련 포함)이 학습권을 침해하지 않는가?"
+      ],
+      "evidence": ["학교운동부 운영 계획", "훈련계획 자료", "학교운동부 상담 일지"],
+      "completionCriteria": "상시 합숙훈련 미운영과 훈련계획의 학습권 보장을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 270: 상시 합숙훈련 근절, 훈련계획(전지훈련 포함)의 적정성",
+      "monthReason": "훈련은 연중 진행되므로 특정 월을 지정하지 않고 수시로 점검"
+    },
+    {
+      "templateTaskId": "sam_004",
+      "sourceAuditItemId": "safety_education",
+      "title": "학생선수 (성)폭력·안전 예방교육 실시",
+      "shortTitle": "폭력·안전 교육",
+      "description": "학생선수를 대상으로 (성)폭력 및 안전 예방교육을 실시하고 결과를 보관하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연 1회 이상",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생선수 대상 (성)폭력 예방교육을 실시했는가?",
+        "안전 예방교육을 실시했는가?",
+        "교육 실시 결과를 보관하고 있는가?"
+      ],
+      "evidence": ["학생선수 (성)폭력·안전 예방교육 실시 내부결재 공문", "교육 실시 결과 자료"],
+      "completionCriteria": "학생선수 대상 예방교육 실시와 결과 보관을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 270·274: 학생선수 (성)폭력 및 안전예방교육 실시 (★⑤)",
+      "monthReason": "상반기 내 예방교육 증빙을 확보하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "sam_005",
+      "sourceAuditItemId": "finance_disclosure",
+      "title": "운영경비·후원금 학교회계 편입 및 공개",
+      "shortTitle": "회계 편입·공개",
+      "description": "학교운동부 운영경비와 학부모 부담경비(후원금)를 학교회계·학교발전기금회계에 편입해 지출하고 교육청 홈페이지에 공개하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "운영경비를 학교회계·학교발전기금회계에 편입해 지출했는가?",
+        "학부모 부담경비(후원금)를 학교회계에 편입했는가?",
+        "교육청 홈페이지에 관련 내용을 공개했는가?"
+      ],
+      "evidence": ["K-에듀파인 지출서류", "학교운동부 관계철", "학교 홈페이지 공개 자료"],
+      "completionCriteria": "운영경비·후원금의 학교회계 편입과 홈페이지 공개를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 270: 학교운동부 운영경비·후원금의 학교회계·학교발전기금회계 편입 지출 및 교육청 홈페이지 공개 (★③)",
+      "monthReason": "상반기 회계 처리 결과를 하반기 초에 점검·공개 확인하기 위해 9월 권장"
+    }
+  ]
+}

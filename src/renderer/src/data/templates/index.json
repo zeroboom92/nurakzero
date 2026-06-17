@@ -11,528 +11,1053 @@
   "items": [
     {
       "templateId": "kindergarten_rules",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "유치원규칙",
       "displayTitle": "유치원규칙",
       "auditDomain": "교무·학사",
       "category": "유치원 학사관리",
       "auditCode": "1-1",
-      "schoolLevels": ["유"],
+      "schoolLevels": [
+        "유"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["유치원규칙", "유치원 규칙", "유치원 학칙", "유치원 운영규정"],
-      "tags": ["유치원", "규칙", "학사"],
+      "aliases": [
+        "유치원규칙",
+        "유치원 규칙",
+        "유치원 학칙",
+        "유치원 운영규정"
+      ],
+      "tags": [
+        "유치원",
+        "규칙",
+        "학사"
+      ],
       "file": "kindergarten_rules.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "kindergarten_attendance_records",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "출결·학적 관리",
       "displayTitle": "유치원 출결·학적 관리",
       "auditDomain": "교무·학사",
       "category": "유치원 학사관리",
       "auditCode": "1-2",
-      "schoolLevels": ["유"],
+      "schoolLevels": [
+        "유"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["유치원 출결", "유치원 학적", "출결관리", "학적관리", "결석", "출석"],
-      "tags": ["유치원", "출결", "학적"],
+      "aliases": [
+        "유치원 출결",
+        "유치원 학적",
+        "출결관리",
+        "학적관리",
+        "결석",
+        "출석"
+      ],
+      "tags": [
+        "유치원",
+        "출결",
+        "학적"
+      ],
       "file": "kindergarten_attendance_records.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "kindergarten_life_record",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "유치원생활기록부 작성·정정·관리",
       "displayTitle": "유치원생활기록부",
       "auditDomain": "교무·학사",
       "category": "유치원 학사관리",
       "auditCode": "1-3",
-      "schoolLevels": ["유"],
+      "schoolLevels": [
+        "유"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["유치원생활기록부", "생활기록부", "유치원 생기부", "생활기록부 정정"],
-      "tags": ["유치원", "생활기록부", "기록"],
+      "aliases": [
+        "유치원생활기록부",
+        "생활기록부",
+        "유치원 생기부",
+        "생활기록부 정정"
+      ],
+      "tags": [
+        "유치원",
+        "생활기록부",
+        "기록"
+      ],
       "file": "kindergarten_life_record.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "kindergarten_curriculum",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "유치원 교육과정",
       "displayTitle": "유치원 교육과정",
       "auditDomain": "교무·학사",
       "category": "유치원 학사관리",
       "auditCode": "1-4",
-      "schoolLevels": ["유"],
+      "schoolLevels": [
+        "유"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["유치원 교육과정", "누리과정", "교육과정 편성", "교육과정 운영"],
-      "tags": ["유치원", "교육과정"],
+      "aliases": [
+        "유치원 교육과정",
+        "누리과정",
+        "교육과정 편성",
+        "교육과정 운영"
+      ],
+      "tags": [
+        "유치원",
+        "교육과정"
+      ],
       "file": "kindergarten_curriculum.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "kindergarten_after_school",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "유치원 방과후 과정",
       "displayTitle": "유치원 방과후 과정",
       "auditDomain": "교무·학사",
       "category": "유치원 학사관리",
       "auditCode": "1-5",
-      "schoolLevels": ["유"],
+      "schoolLevels": [
+        "유"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["유치원 방과후", "방과후 과정", "유치원 돌봄", "방과후과정"],
-      "tags": ["유치원", "방과후"],
+      "aliases": [
+        "유치원 방과후",
+        "방과후 과정",
+        "유치원 돌봄",
+        "방과후과정"
+      ],
+      "tags": [
+        "유치원",
+        "방과후"
+      ],
       "file": "kindergarten_after_school.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_rules",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교규칙",
       "displayTitle": "학교규칙",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["학교규칙", "학칙", "학교 규정", "학교규정", "규칙 개정"],
-      "tags": ["학사", "규칙", "학칙"],
+      "aliases": [
+        "학교규칙",
+        "학칙",
+        "학교 규정",
+        "학교규정",
+        "규칙 개정"
+      ],
+      "tags": [
+        "학사",
+        "규칙",
+        "학칙"
+      ],
       "file": "school_rules.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "attendance_management",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "출결 관리",
       "displayTitle": "출결 관리",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-2",
-      "schoolLevels": ["초", "중", "고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["출결", "출결관리", "출석", "결석", "지각", "조퇴", "결과", "교외체험학습", "결석계"],
-      "tags": ["출결", "나이스", "학사"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "출결",
+        "출결관리",
+        "출석",
+        "결석",
+        "지각",
+        "조퇴",
+        "결과",
+        "교외체험학습",
+        "결석계"
+      ],
+      "tags": [
+        "출결",
+        "나이스",
+        "학사"
+      ],
       "file": "attendance_management.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "elementary_student_status_management",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "초등 학적 관리",
       "displayTitle": "초등 학적 관리",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-3-1",
-      "schoolLevels": ["초"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["학적", "초등 학적", "전입", "전출", "취학", "유예", "면제", "정원외"],
-      "tags": ["학적", "나이스", "초등"],
+      "schoolLevels": [
+        "초"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "학적",
+        "초등 학적",
+        "전입",
+        "전출",
+        "취학",
+        "유예",
+        "면제",
+        "정원외"
+      ],
+      "tags": [
+        "학적",
+        "나이스",
+        "초등"
+      ],
       "file": "elementary_student_status_management.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "secondary_student_status_management",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "중등 학적 관리",
       "displayTitle": "중등 학적 관리",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-3-2",
-      "schoolLevels": ["중", "고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["중등 학적", "학적", "전입", "전출", "재입학", "편입학", "자퇴", "퇴학"],
-      "tags": ["학적", "중등", "나이스"],
+      "schoolLevels": [
+        "중",
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "중등 학적",
+        "학적",
+        "전입",
+        "전출",
+        "재입학",
+        "편입학",
+        "자퇴",
+        "퇴학"
+      ],
+      "tags": [
+        "학적",
+        "중등",
+        "나이스"
+      ],
       "file": "secondary_student_status_management.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "elementary_student_records",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "초등 학교생활기록부 작성·정정·관리",
       "displayTitle": "초등 학교생활기록부",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-4-1",
-      "schoolLevels": ["초"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["생활기록부", "학교생활기록부", "생기부", "학생부", "생활기록부 정정", "나이스"],
-      "tags": ["생활기록부", "초등", "나이스"],
+      "schoolLevels": [
+        "초"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "생활기록부",
+        "학교생활기록부",
+        "생기부",
+        "학생부",
+        "생활기록부 정정",
+        "나이스"
+      ],
+      "tags": [
+        "생활기록부",
+        "초등",
+        "나이스"
+      ],
       "file": "elementary_student_records.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "secondary_student_records",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "중등 학교생활기록부 작성·정정·관리",
       "displayTitle": "중등 학교생활기록부",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-4-2",
-      "schoolLevels": ["중", "고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["생활기록부", "학교생활기록부", "생기부", "학생부", "생활기록부 정정", "나이스"],
-      "tags": ["생활기록부", "중등", "나이스"],
+      "schoolLevels": [
+        "중",
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "생활기록부",
+        "학교생활기록부",
+        "생기부",
+        "학생부",
+        "생활기록부 정정",
+        "나이스"
+      ],
+      "tags": [
+        "생활기록부",
+        "중등",
+        "나이스"
+      ],
       "file": "secondary_student_records.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "high_school_admission",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "고등학교 입학전형",
       "displayTitle": "고등학교 입학전형",
       "auditDomain": "교무·학사",
       "category": "초·중등 학사관리",
       "auditCode": "2-5",
-      "schoolLevels": ["고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["고입", "고등학교 입학", "입학전형", "전형", "신입생 선발"],
-      "tags": ["고등학교", "입학전형"],
+      "schoolLevels": [
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "고입",
+        "고등학교 입학",
+        "입학전형",
+        "전형",
+        "신입생 선발"
+      ],
+      "tags": [
+        "고등학교",
+        "입학전형"
+      ],
       "file": "high_school_admission.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "elementary_curriculum",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "초등 교육과정",
       "displayTitle": "초등 교육과정",
       "auditDomain": "교무·학사",
       "category": "교육과정·평가",
       "auditCode": "3-1-1",
-      "schoolLevels": ["초"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["교육과정", "초등 교육과정", "학교교육과정", "시수", "수업일수", "수업시수"],
-      "tags": ["교육과정", "초등"],
+      "schoolLevels": [
+        "초"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "교육과정",
+        "초등 교육과정",
+        "학교교육과정",
+        "시수",
+        "수업일수",
+        "수업시수"
+      ],
+      "tags": [
+        "교육과정",
+        "초등"
+      ],
       "file": "elementary_curriculum.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "secondary_curriculum",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "중등 교육과정",
       "displayTitle": "중등 교육과정",
       "auditDomain": "교무·학사",
       "category": "교육과정·평가",
       "auditCode": "3-1-2",
-      "schoolLevels": ["중", "고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["교육과정", "중등 교육과정", "학교교육과정", "시수", "수업일수", "수업시수"],
-      "tags": ["교육과정", "중등"],
+      "schoolLevels": [
+        "중",
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "교육과정",
+        "중등 교육과정",
+        "학교교육과정",
+        "시수",
+        "수업일수",
+        "수업시수"
+      ],
+      "tags": [
+        "교육과정",
+        "중등"
+      ],
       "file": "secondary_curriculum.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "elementary_student_assessment",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": "초등 학생평가",
       "displayTitle": "초등 학생평가",
       "auditDomain": "교무·학사",
       "category": "교육과정·평가",
       "auditCode": "3-2-1",
-      "schoolLevels": ["초"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["학생평가", "초등 평가", "평가계획", "수행평가", "성취기준", "평가 결과"],
-      "tags": ["평가", "초등"],
+      "schoolLevels": [
+        "초"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "학생평가",
+        "초등 평가",
+        "평가계획",
+        "수행평가",
+        "성취기준",
+        "평가 결과"
+      ],
+      "tags": [
+        "평가",
+        "초등"
+      ],
       "file": "elementary_student_assessment.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "secondary_student_assessment",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "중등 학생평가",
       "displayTitle": "중등 학생평가",
       "auditDomain": "교무·학사",
       "category": "교육과정·평가",
       "auditCode": "3-2-2",
-      "schoolLevels": ["중", "고"],
-      "conditionalSchoolLevels": ["특"],
-      "aliases": ["학생평가", "중등 평가", "지필평가", "수행평가", "학업성적관리", "성적처리"],
-      "tags": ["평가", "중등", "성적"],
+      "schoolLevels": [
+        "중",
+        "고"
+      ],
+      "conditionalSchoolLevels": [
+        "특"
+      ],
+      "aliases": [
+        "학생평가",
+        "중등 평가",
+        "지필평가",
+        "수행평가",
+        "학업성적관리",
+        "성적처리"
+      ],
+      "tags": [
+        "평가",
+        "중등",
+        "성적"
+      ],
       "file": "secondary_student_assessment.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_competitions_awards",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "교내대회 운영 및 수상경력 관리",
       "displayTitle": "교내대회·수상경력",
       "auditDomain": "교무·학사",
       "category": "교육과정·평가",
       "auditCode": "3-3",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["교내대회", "대회", "수상", "수상경력", "상장", "시상", "수상대장"],
-      "tags": ["교내대회", "수상"],
+      "aliases": [
+        "교내대회",
+        "대회",
+        "수상",
+        "수상경력",
+        "상장",
+        "시상",
+        "수상대장"
+      ],
+      "tags": [
+        "교내대회",
+        "수상"
+      ],
       "file": "school_competitions_awards.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "teacher_personnel_service",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "교원인사 및 복무관리",
       "displayTitle": "교원인사·복무",
       "auditDomain": "교무·학사",
       "category": "교원인사관리·교육활동보호",
       "auditCode": "4-1",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["교원인사", "복무", "교원 복무", "휴가", "출장", "근무상황", "인사"],
-      "tags": ["교원", "인사", "복무"],
+      "aliases": [
+        "교원인사",
+        "복무",
+        "교원 복무",
+        "휴가",
+        "출장",
+        "근무상황",
+        "인사"
+      ],
+      "tags": [
+        "교원",
+        "인사",
+        "복무"
+      ],
       "file": "teacher_personnel_service.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "educational_activity_protection",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교교육활동 보호",
       "displayTitle": "학교교육활동 보호",
       "auditDomain": "교무·학사",
       "category": "교원인사관리·교육활동보호",
       "auditCode": "4-2",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["교육활동보호", "교권보호", "교육활동 침해", "교권", "학교교권보호위원회"],
-      "tags": ["교육활동보호", "교권"],
+      "aliases": [
+        "교육활동보호",
+        "교권보호",
+        "교육활동 침해",
+        "교권",
+        "학교교권보호위원회"
+      ],
+      "tags": [
+        "교육활동보호",
+        "교권"
+      ],
       "file": "educational_activity_protection.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "student_life_rules_committee",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학생생활규정 및 학생생활교육위원회",
       "displayTitle": "학생생활규정·생활교육위원회",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["학생생활규정", "생활규정", "학생생활교육위원회", "생활교육위원회", "선도위원회"],
-      "tags": ["생활교육", "학생생활규정"],
+      "aliases": [
+        "학생생활규정",
+        "생활규정",
+        "학생생활교육위원회",
+        "생활교육위원회",
+        "선도위원회"
+      ],
+      "tags": [
+        "생활교육",
+        "학생생활규정"
+      ],
       "file": "student_life_rules_committee.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "violence_abuse_prevention_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교폭력·성폭력·아동학대 및 가정폭력 예방교육",
       "displayTitle": "폭력·학대 예방교육",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-2",
-      "schoolLevels": ["초", "중", "고", "특"],
-      "conditionalSchoolLevels": ["유"],
-      "aliases": ["학교폭력 예방교육", "성폭력 예방교육", "아동학대 예방교육", "가정폭력 예방교육", "폭력예방교육", "예방교육"],
-      "tags": ["학교폭력", "성폭력", "아동학대", "예방교육"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
+      "conditionalSchoolLevels": [
+        "유"
+      ],
+      "aliases": [
+        "학교폭력 예방교육",
+        "성폭력 예방교육",
+        "아동학대 예방교육",
+        "가정폭력 예방교육",
+        "폭력예방교육",
+        "예방교육"
+      ],
+      "tags": [
+        "학교폭력",
+        "성폭력",
+        "아동학대",
+        "예방교육"
+      ],
       "file": "violence_abuse_prevention_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_violence_case_handling",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교폭력 사안처리",
       "displayTitle": "학교폭력 사안처리",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-3",
-      "schoolLevels": ["초", "중", "고", "특"],
-      "conditionalSchoolLevels": ["유"],
-      "aliases": ["학교폭력", "학폭", "사안처리", "학교폭력대장", "전담기구", "자체해결"],
-      "tags": ["학교폭력", "사안처리"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
+      "conditionalSchoolLevels": [
+        "유"
+      ],
+      "aliases": [
+        "학교폭력",
+        "학폭",
+        "사안처리",
+        "학교폭력대장",
+        "전담기구",
+        "자체해결"
+      ],
+      "tags": [
+        "학교폭력",
+        "사안처리"
+      ],
       "file": "school_violence_case_handling.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_violence_record_management",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교폭력 가해학생 학생부 관리",
       "displayTitle": "학교폭력 학생부 관리",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-4",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["학교폭력 학생부", "가해학생", "조치사항", "학생부 관리", "학교폭력 조치사항"],
-      "tags": ["학교폭력", "생활기록부"],
+      "aliases": [
+        "학교폭력 학생부",
+        "가해학생",
+        "조치사항",
+        "학생부 관리",
+        "학교폭력 조치사항"
+      ],
+      "tags": [
+        "학교폭력",
+        "생활기록부"
+      ],
       "file": "school_violence_record_management.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "life_respect_dropout_prevention",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학생 생명존중교육 및 학업중단숙려제 운영",
       "displayTitle": "생명존중교육·학업중단숙려제",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-5",
-      "schoolLevels": ["초", "중", "고"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["생명존중", "자살예방", "생명존중교육", "학업중단숙려제", "숙려제"],
-      "tags": ["생명존중", "학업중단숙려제"],
+      "aliases": [
+        "생명존중",
+        "자살예방",
+        "생명존중교육",
+        "학업중단숙려제",
+        "숙려제"
+      ],
+      "tags": [
+        "생명존중",
+        "학업중단숙려제"
+      ],
       "file": "life_respect_dropout_prevention.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_safety_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교안전교육",
       "displayTitle": "학교안전교육",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-6",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["안전교육", "학교안전", "안전계획", "7대 안전교육", "재난안전", "생활안전"],
-      "tags": ["안전교육", "학교안전"],
+      "aliases": [
+        "안전교육",
+        "학교안전",
+        "안전계획",
+        "7대 안전교육",
+        "재난안전",
+        "생활안전"
+      ],
+      "tags": [
+        "안전교육",
+        "학교안전"
+      ],
       "file": "school_safety_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "field_trip",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "현장체험학습",
       "displayTitle": "현장체험학습",
       "auditDomain": "교무·학사",
       "category": "학생생활교육",
       "auditCode": "5-7",
-      "schoolLevels": ["초", "중", "고", "특"],
-      "conditionalSchoolLevels": ["유"],
-      "aliases": ["현장체험학습", "체험학습", "수학여행", "수련활동", "교외체험학습", "현장학습"],
-      "tags": ["현장체험학습", "체험학습"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
+      "conditionalSchoolLevels": [
+        "유"
+      ],
+      "aliases": [
+        "현장체험학습",
+        "체험학습",
+        "수학여행",
+        "수련활동",
+        "교외체험학습",
+        "현장학습"
+      ],
+      "tags": [
+        "현장체험학습",
+        "체험학습"
+      ],
       "file": "field_trip.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "science_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "과학교육",
       "displayTitle": "과학교육",
       "auditDomain": "교무·학사",
       "category": "과학·직업교육 및 정보보호",
       "auditCode": "6-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["과학", "과학교육", "과학실", "실험실", "과학실험", "실험안전"],
-      "tags": ["과학", "실험", "과학실"],
+      "aliases": [
+        "과학",
+        "과학교육",
+        "과학실",
+        "실험실",
+        "과학실험",
+        "실험안전"
+      ],
+      "tags": [
+        "과학",
+        "실험",
+        "과학실"
+      ],
       "file": "science_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "vocational_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "직업교육",
       "displayTitle": "직업교육",
       "auditDomain": "교무·학사",
       "category": "과학·직업교육 및 정보보호",
       "auditCode": "6-2",
-      "schoolLevels": ["고"],
+      "schoolLevels": [
+        "고"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["직업교육", "직업계고", "실습", "현장실습", "취업"],
-      "tags": ["직업교육", "고등학교"],
+      "aliases": [
+        "직업교육",
+        "직업계고",
+        "실습",
+        "현장실습",
+        "취업"
+      ],
+      "tags": [
+        "직업교육",
+        "고등학교"
+      ],
       "file": "vocational_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "privacy_protection",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": "개인정보 보호",
       "displayTitle": "개인정보보호",
       "auditDomain": "교무·학사",
       "category": "과학·직업교육 및 정보보호",
       "auditCode": "6-3",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["개인정보", "개인정보보호", "개인정보 보호", "정보보호", "정보보안", "교육정보", "정보업무", "개인정보 담당"],
-      "tags": ["개인정보", "정보보호", "정보보안"],
+      "aliases": [
+        "개인정보",
+        "개인정보보호",
+        "개인정보 보호",
+        "정보보호",
+        "정보보안",
+        "교육정보",
+        "정보업무",
+        "개인정보 담당"
+      ],
+      "tags": [
+        "개인정보",
+        "정보보호",
+        "정보보안"
+      ],
       "file": "privacy_protection.v1.json",
       "templateStatus": "ready"
     },
     {
       "templateId": "school_physical_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교체육",
       "displayTitle": "학교체육",
       "auditDomain": "교무·학사",
       "category": "체육·보건 교육",
       "auditCode": "7-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["체육", "학교체육", "체육교육", "스포츠클럽", "건강체력"],
-      "tags": ["체육", "학교체육"],
+      "aliases": [
+        "체육",
+        "학교체육",
+        "체육교육",
+        "스포츠클럽",
+        "건강체력"
+      ],
+      "tags": [
+        "체육",
+        "학교체육"
+      ],
       "file": "school_physical_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "student_athlete_management",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학생선수 운영",
       "displayTitle": "학생선수 운영",
       "auditDomain": "교무·학사",
       "category": "체육·보건 교육",
       "auditCode": "7-2",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["학생선수", "운동부", "학교운동부", "최저학력", "학생선수 관리"],
-      "tags": ["학생선수", "운동부"],
+      "aliases": [
+        "학생선수",
+        "운동부",
+        "학교운동부",
+        "최저학력",
+        "학생선수 관리"
+      ],
+      "tags": [
+        "학생선수",
+        "운동부"
+      ],
       "file": "student_athlete_management.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_health",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교보건",
       "displayTitle": "학교보건",
       "auditDomain": "교무·학사",
       "category": "체육·보건 교육",
       "auditCode": "7-3",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["보건", "학교보건", "건강검사", "감염병", "보건교육", "응급처치"],
-      "tags": ["보건", "건강", "감염병"],
+      "aliases": [
+        "보건",
+        "학교보건",
+        "건강검사",
+        "감염병",
+        "보건교육",
+        "응급처치"
+      ],
+      "tags": [
+        "보건",
+        "건강",
+        "감염병"
+      ],
       "file": "school_health.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "school_library",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "학교도서관 운영",
       "displayTitle": "학교도서관",
       "auditDomain": "교무·학사",
       "category": "독서교육·학교도서관",
       "auditCode": "8-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["도서관", "학교도서관", "독서교육", "도서", "장서", "도서관운영"],
-      "tags": ["도서관", "독서교육"],
+      "aliases": [
+        "도서관",
+        "학교도서관",
+        "독서교육",
+        "도서",
+        "장서",
+        "도서관운영"
+      ],
+      "tags": [
+        "도서관",
+        "독서교육"
+      ],
       "file": "school_library.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "special_education",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "특수교육 운영",
       "displayTitle": "특수교육",
       "auditDomain": "교무·학사",
       "category": "특수교육",
       "auditCode": "9-1",
-      "schoolLevels": ["유", "초", "중", "고", "특"],
+      "schoolLevels": [
+        "유",
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["특수교육", "특수학급", "개별화교육", "IEP", "개별화교육계획", "특수교육대상자"],
-      "tags": ["특수교육", "개별화교육"],
+      "aliases": [
+        "특수교육",
+        "특수학급",
+        "개별화교육",
+        "IEP",
+        "개별화교육계획",
+        "특수교육대상자"
+      ],
+      "tags": [
+        "특수교육",
+        "개별화교육"
+      ],
       "file": "special_education.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     },
     {
       "templateId": "after_school_neulbom",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "title": "방과후학교 운영",
       "displayTitle": "방과후·늘봄학교",
       "auditDomain": "교무·학사",
       "category": "방과후학교",
       "auditCode": "10-1",
-      "schoolLevels": ["초", "중", "고", "특"],
+      "schoolLevels": [
+        "초",
+        "중",
+        "고",
+        "특"
+      ],
       "conditionalSchoolLevels": [],
-      "aliases": ["방과후", "방과후학교", "늘봄", "늘봄학교", "돌봄", "강사", "방과후 강사"],
-      "tags": ["방과후", "늘봄"],
+      "aliases": [
+        "방과후",
+        "방과후학교",
+        "늘봄",
+        "늘봄학교",
+        "돌봄",
+        "강사",
+        "방과후 강사"
+      ],
+      "tags": [
+        "방과후",
+        "늘봄"
+      ],
       "file": "after_school_neulbom.v1.json",
-      "templateStatus": "indexOnly"
+      "templateStatus": "ready"
     }
   ]
 }

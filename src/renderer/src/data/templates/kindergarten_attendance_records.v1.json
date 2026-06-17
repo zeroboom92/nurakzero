@@ -1,0 +1,164 @@
+{
+  "templateId": "kindergarten_attendance_records",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "유치원 출결·학적 관리",
+  "displayTitle": "유치원 출결·학적 관리",
+  "description": "유아모집·선발, 출석인정·질병결석 관리, 미인정결석 처리·조치, 경조사·공휴일 산입, 학적 처리와 수업일수 산정을 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "1",
+    "areaName": "유치원 학사관리",
+    "itemCode": "1-2",
+    "itemName": "유치원 출결·학적 관리"
+  },
+  "schoolLevels": ["유"],
+  "aliases": ["유치원 출결", "유치원 학적", "출결관리", "학적관리", "결석", "출석"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "1-2 유치원 출결·학적 관리",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 120·123의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "admission", "title": "유아모집·선발 및 관리", "sourceTables": [120] },
+    { "id": "attendance", "title": "출석인정·질병결석 관리", "sourceTables": [120] },
+    { "id": "absence", "title": "기타·미인정결석 처리 및 조치", "sourceTables": [120] },
+    { "id": "leave_days", "title": "경조사 일수·공휴일 산입", "sourceTables": [120] },
+    { "id": "record", "title": "학적 처리 및 수업일수 산정", "sourceTables": [120] }
+  ],
+  "legalReferences": [
+    "① 유아교육법 제11조·제14조",
+    "② 유아교육법 시행령 제12조·제14조",
+    "③ 유치원생활기록부 작성 및 관리지침(교육부 고시 제2023-4호)",
+    "④ 2024학년도 유치원생활기록부 기재요령(교육부)",
+    "⑤ 유치원·어린이집 아동학대 조기 발견 및 관리대응 매뉴얼(교육부)",
+    "⑥ 교육관련기관의 정보공개에 관한 특례법 제5조의2",
+    "⑦ 전북특별자치도교육청 유아모집·선발계획(당해년도)"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "kar_001",
+      "sourceAuditItemId": "admission",
+      "title": "유아모집·선발 및 관리",
+      "shortTitle": "유아모집·선발",
+      "description": "우선모집·일반모집·추가모집 등 유아 모집·선발이 당해 연도 계획에 따라 적정하게 이루어지고 관리되는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "우선모집·일반모집·추가모집을 계획에 따라 실시했는가?",
+        "선발 결과를 적정하게 관리하고 있는가?",
+        "관련 증빙서류를 구비했는가?"
+      ],
+      "evidence": ["유아모집·선발 계획", "모집·선발 결과 자료", "관련 내부결재 공문"],
+      "completionCriteria": "모집·선발 절차와 결과 관리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 120: 유아모집·선발 및 관리의 적정 - 우선모집, 일반모집, 추가모집 등 (★⑨)",
+      "monthReason": "학년 초 모집·선발 결과를 정비·점검하기 위해 3월 권장"
+    },
+    {
+      "templateTaskId": "kar_002",
+      "sourceAuditItemId": "attendance",
+      "title": "출석인정·질병결석 관리",
+      "shortTitle": "결석 증빙 관리",
+      "description": "출석인정결석과 질병결석의 인정 사유가 적정하고 증빙자료를 구비해 관리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시 및 학기별",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "출석인정결석의 인정 사유가 적정한가?",
+        "질병결석의 인정 사유와 증빙자료가 적정한가?",
+        "출결상황을 정확히 관리하고 있는가?"
+      ],
+      "evidence": ["유치원생활기록부(출결상황)", "출결 증빙자료"],
+      "completionCriteria": "출석인정·질병결석 사유와 증빙자료를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 120: 출결상황 관리의 적정 - 출석인정결석·질병결석 유아의 인정 사유 및 증빙자료의 적정 (★④,⑤,⑥)",
+      "monthReason": "1학기 출결 관리 상태를 점검하기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "kar_003",
+      "sourceAuditItemId": "absence",
+      "title": "기타·미인정결석 처리 및 조치",
+      "shortTitle": "미인정결석 처리",
+      "description": "기타결석·미인정결석 유아의 출결 처리가 적정하고, 미인정결석 발생 시 일자별 운영사항을 준수하며 아동학대 조기발견 등 조치가 이루어지는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "기타결석·미인정결석 유아의 출결 처리가 적정한가?",
+        "미인정결석 발생 시 일자별 운영사항을 준수했는가?",
+        "아동학대 조기발견 등 필요한 조치를 했는가?"
+      ],
+      "evidence": ["유치원생활기록부(출결상황)", "미인정결석 관리 자료", "조치 관련 내부결재 공문"],
+      "completionCriteria": "미인정·기타결석 처리와 일자별 운영·조치를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 120: 미인정결석 유아 출결 및 조치의 적정 - 일자별 운영사항 준수, 아동학대 조기발견 (★②,③,④,⑤,⑥,⑦)",
+      "monthReason": "1학기 미인정결석 관리 상태를 점검하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "kar_004",
+      "sourceAuditItemId": "leave_days",
+      "title": "경조사 일수·공휴일 산입 점검",
+      "shortTitle": "경조사·공휴일",
+      "description": "경조사 일수를 준수하고 공휴일 산입 제외 기준에 맞게 출결을 처리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시",
+      "recommendedMonth": 6,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "경조사 일수를 기준대로 준수했는가?",
+        "공휴일 산입 제외 기준을 적용했는가?"
+      ],
+      "evidence": ["유치원생활기록부(출결상황)", "출결 증빙자료"],
+      "completionCriteria": "경조사 일수 준수와 공휴일 산입 제외 적용을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 120: 경조사 일수 준수 및 공휴일 산입 제외",
+      "monthReason": "1학기 출결 처리 기준 적용을 점검하기 위해 6월 권장"
+    },
+    {
+      "templateTaskId": "kar_005",
+      "sourceAuditItemId": "record",
+      "title": "학적 처리 및 수업일수 산정",
+      "shortTitle": "학적·수업일수",
+      "description": "학적 처리가 적정하고 학적 변동 시 수업일수 산정이 기준에 맞게 이루어지는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사유 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학적 처리가 지침에 따라 적정하게 이루어졌는가?",
+        "학적 변동 시 수업일수 산정이 기준에 맞는가?"
+      ],
+      "evidence": ["학적 처리 관련 서류", "수업일수 산정 자료"],
+      "completionCriteria": "학적 처리 적정성과 학적 변동 시 수업일수 산정을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 120: 학적 처리의 적정, 학적 변동 시 수업일수 산정 적정 (★①~⑨)",
+      "monthReason": "학적 변동은 사유 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

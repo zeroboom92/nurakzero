@@ -1,0 +1,163 @@
+{
+  "templateId": "science_education",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "과학실험 실습지도",
+  "displayTitle": "과학교육",
+  "description": "과학실험실 안전 점검과 안전관리 계획, 안전교육, 유해화학물질 관리, 실험폐수·폐시약 관리를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "6",
+    "areaName": "과학·직업교육 및 정보보호",
+    "itemCode": "6-1",
+    "itemName": "과학실험 실습지도"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["과학", "과학교육", "과학실", "실험실", "과학실험", "실험안전"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "6-1 과학실험 실습지도",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 250·253의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "inspection", "title": "과학실험실 안전 점검", "sourceTables": [250] },
+    { "id": "plan", "title": "안전관리 계획·점검표 비치", "sourceTables": [250] },
+    { "id": "education", "title": "과학 안전교육 실시", "sourceTables": [250] },
+    { "id": "chemicals", "title": "유해화학물질 관리", "sourceTables": [250] },
+    { "id": "waste", "title": "실험폐수·폐시약 관리", "sourceTables": [250, 253] }
+  ],
+  "legalReferences": [
+    "① 전북특별자치도교육청 과학실험실 안전관리 계획",
+    "② 재난 및 안전관리기본법 시행령 제73조의6",
+    "③ 산업안전보건법 시행규칙 제141조·제143조·제169조·제170조",
+    "④ 교육시설 등의 안전 및 유지관리 등에 관한 법률 시행령 제12조",
+    "⑤ 화학물질관리법 제13조·제24조 및 같은 법 시행규칙 제26조",
+    "⑥ 과학실험실 폐수·폐기물 처리 지침"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "sci_001",
+      "sourceAuditItemId": "inspection",
+      "title": "과학실험실 안전 점검(월 1회 이상)",
+      "shortTitle": "실험실 안전점검",
+      "description": "과학실험실 안전 점검을 방학을 포함해 매월 1회 이상 실시하고 안전관리점검표를 비치하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "월 1회 이상",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "과학실험실 안전 점검을 매월 1회 이상(방학 포함) 실시했는가?",
+        "안전관리점검표를 비치·기록하고 있는가?"
+      ],
+      "evidence": ["과학실험실 안전관리 점검표", "월별 안전 점검 기록"],
+      "completionCriteria": "월 1회 이상 안전 점검 실시와 점검표 비치를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 250: 과학실험실 안전 점검 월 1회 이상(방학 포함) 실시, 안전관리점검표 비치 (★①,②,④)",
+      "monthReason": "매월 실시하는 상시 안전 업무이므로 특정 월을 지정하지 않음(수시·정기)"
+    },
+    {
+      "templateTaskId": "sci_002",
+      "sourceAuditItemId": "plan",
+      "title": "과학실험실 안전관리 계획·점검표 비치",
+      "shortTitle": "안전관리 계획",
+      "description": "과학실험실 안전관리 계획을 수립하고 안전관리 점검표를 비치하는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "과학실험실 안전관리 계획을 수립했는가?",
+        "안전관리 점검표를 비치했는가?"
+      ],
+      "evidence": ["과학실험실 안전관리 계획", "안전관리 점검표"],
+      "completionCriteria": "안전관리 계획 수립과 점검표 비치를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 250: 과학실험실 안전관리 계획 및 안전관리 점검표 비치 (★①)",
+      "monthReason": "학기 초 안전관리 체계를 갖춰야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "sci_003",
+      "sourceAuditItemId": "education",
+      "title": "과학 안전교육 실시",
+      "shortTitle": "안전교육 실시",
+      "description": "과학수업 담당교사·과학실 사용 외부강사를 대상으로 과학실험 안전 관련 내용을 포함한 안전교육을 연 1회 이상 실시하는지 확인한다.",
+      "taskType": "교육",
+      "cycle": "연 1회 이상",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "과학수업 담당교사·과학실 사용 외부강사를 대상으로 안전교육을 실시했는가?",
+        "연 1회 이상 실시했는가?",
+        "교육 내용에 과학실험 안전 관련 내용을 포함했는가?"
+      ],
+      "evidence": ["과학 안전교육 실시 자료", "관련 내부결재 공문"],
+      "completionCriteria": "대상별 안전교육을 연 1회 이상 실시하고 결과를 보관하면 완료 처리한다.",
+      "sourceBasis": "원본 표 250: 교직원(과학수업 담당교사·과학실 사용 외부강사) 대상 안전교육 연 1회 이상 실시, 과학실험 안전 내용 포함 (★①,③)",
+      "monthReason": "실험 수업이 본격화되기 전 상반기에 안전교육을 마치기 위해 4월 권장"
+    },
+    {
+      "templateTaskId": "sci_004",
+      "sourceAuditItemId": "chemicals",
+      "title": "유해화학물질 관리",
+      "shortTitle": "유해물질 관리",
+      "description": "유해화학물질을 성상별로 분류해 밀폐시약장에 이중 잠금장치로 별도 보관하고 취급주의 표시 등 관리 의무를 준수하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시 및 학기별",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "유해화학물질을 성상별로 분류해 보관하는가?",
+        "밀폐시약장 이중 잠금장치로 별도 보관하는가?",
+        "취급주의 표시 등 관리 의무를 준수하는가?"
+      ],
+      "evidence": ["유해화학물질 관리대장", "물질안전보건자료(MSDS)", "보관 현황 자료"],
+      "completionCriteria": "유해화학물질 분류·이중 잠금 보관·표시 관리를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 250: 유해화학물질 성상별 분류 및 밀폐시약장 이중 잠금장치 보관, 별도보관·잠금장치·취급주의 표시 의무 준수 (★⑤)",
+      "monthReason": "실험 수업이 활발한 상반기에 화학물질 보관 상태를 점검하기 위해 5월 권장"
+    },
+    {
+      "templateTaskId": "sci_005",
+      "sourceAuditItemId": "waste",
+      "title": "실험폐수·폐시약 관리",
+      "shortTitle": "폐수·폐시약 관리",
+      "description": "실험폐수 처리 자체점검표와 폐수·폐시약 관리대장을 비치하고 처리 지침에 따라 관리하는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "수시 및 학기별",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "실험폐수 처리 자체점검표를 비치·기록하는가?",
+        "폐수·폐시약 관리대장을 비치·관리하는가?",
+        "폐수·폐기물 처리 지침을 준수하는가?"
+      ],
+      "evidence": ["실험폐수 처리 자체점검표", "폐수·폐시약 관리대장"],
+      "completionCriteria": "폐수·폐시약 점검표·관리대장 비치와 지침 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 250·253: 실험폐수 처리 자체점검표, 폐수·폐시약 관리대장 비치 (★⑥)",
+      "monthReason": "2학기 실험 누적 후 폐수·폐시약 관리 상태를 점검하기 위해 9월 권장"
+    }
+  ]
+}

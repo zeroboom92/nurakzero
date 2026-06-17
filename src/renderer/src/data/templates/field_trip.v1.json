@@ -1,0 +1,158 @@
+{
+  "templateId": "field_trip",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "현장체험학습",
+  "displayTitle": "현장체험학습",
+  "description": "현장체험학습 계획 수립, 사전 학부모 동의·선호도 조사, 현장답사·컨설팅, 미참가학생 지도, 만족도 조사·결과 공개를 담당자가 실제로 점검할 수 있는 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-7",
+    "itemName": "현장체험학습"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["현장체험학습", "체험학습", "수학여행", "수련활동", "교외체험학습", "현장학습"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-7 현장체험학습",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 245·248의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "plan", "title": "현장체험학습 계획 수립", "sourceTables": [245] },
+    { "id": "consent", "title": "사전 학부모 동의 및 선호도 조사", "sourceTables": [245] },
+    { "id": "survey_visit", "title": "현장답사 및 컨설팅", "sourceTables": [245] },
+    { "id": "nonparticipant", "title": "미참가학생 지도 계획", "sourceTables": [245] },
+    { "id": "result", "title": "만족도 조사 및 결과 공개", "sourceTables": [245, 248] }
+  ],
+  "legalReferences": [
+    "① 현장체험학습 안내자료(교육부, 2025. 1. 2.)",
+    "② 현장체험학습 운영 매뉴얼(전북특별자치도교육청)",
+    "③ 전북특별자치도 학교회계 예산편성 및 운영지침"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "fdt_001",
+      "sourceAuditItemId": "plan",
+      "title": "현장체험학습 계획 수립",
+      "shortTitle": "체험학습 계획",
+      "description": "수학여행·수련활동·1일형 현장체험학습 계획을 수립하고 학교교육과정에 반영했는지 확인한다.",
+      "taskType": "계획",
+      "cycle": "연 1회 및 실시 전",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "현장체험학습 계획을 수립했는가?",
+        "수학여행·수련활동·1일형 현장체험학습을 학교교육과정에 반영했는가?"
+      ],
+      "evidence": ["현장체험학습 운영 계획", "학교교육과정계획서", "관련 내부결재 공문"],
+      "completionCriteria": "현장체험학습 계획 수립과 교육과정 반영을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 245: 현장체험학습 계획 수립 및 운영, 학교교육과정 반영 (★①,②)",
+      "monthReason": "학기 초 연간 현장체험학습 계획을 수립해야 하므로 3월 권장"
+    },
+    {
+      "templateTaskId": "fdt_002",
+      "sourceAuditItemId": "consent",
+      "title": "사전 학부모 동의 및 선호도 조사",
+      "shortTitle": "동의·선호도 조사",
+      "description": "현장체험학습 실시 전 학부모 동의와 학생 선호도 조사를 실시했는지(테마식 동의 70% 이상, 국외 80% 이상) 확인한다.",
+      "taskType": "점검",
+      "cycle": "실시 전",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "실시 전 학부모 동의를 받았는가?",
+        "학생 선호도 조사를 실시했는가?",
+        "테마식의 경우 동의 비율(70% 이상, 국외 80% 이상)을 충족했는가?"
+      ],
+      "evidence": ["학부모 동의 자료", "학생 선호도 조사 자료"],
+      "completionCriteria": "학부모 동의·선호도 조사와 동의 비율 충족을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 245: 실시 전 학부모 동의 및 학생 선호도 조사 - 테마식 학부모 동의 70% 이상(국외 80% 이상) (★①,②)",
+      "monthReason": "체험학습 실시 전 사전 동의·조사 시기를 고려해 4월 권장"
+    },
+    {
+      "templateTaskId": "fdt_003",
+      "sourceAuditItemId": "survey_visit",
+      "title": "현장답사 및 컨설팅 실시",
+      "shortTitle": "답사·컨설팅",
+      "description": "현장답사를 실시하고, 참가학생 150명 이상 대규모 또는 국외 테마식의 경우 컨설팅을 실시했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "실시 전",
+      "recommendedMonth": 5,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "현장답사를 실시했는가?",
+        "참가학생 150명 이상 대규모 또는 국외 테마식의 경우 컨설팅을 실시했는가?"
+      ],
+      "evidence": ["현장답사 결과 자료", "컨설팅 실시 자료"],
+      "completionCriteria": "현장답사와 대상별 컨설팅 실시를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 245: 현장답사 실시, 컨설팅 실시(참가학생 150명 이상 대규모 또는 국외 테마식) (★①,②)",
+      "monthReason": "체험학습 실시 전 답사·컨설팅 시기를 고려해 5월 권장"
+    },
+    {
+      "templateTaskId": "fdt_004",
+      "sourceAuditItemId": "nonparticipant",
+      "title": "미참가학생 지도 계획",
+      "shortTitle": "미참가 지도",
+      "description": "현장체험학습 미참가학생을 위한 별도 프로그램·지도 교사 등 지도 계획을 마련했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "실시 전",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "low",
+      "riskLevel": "하",
+      "isCore": false,
+      "isAuditFocus": false,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "미참가학생을 위한 별도 프로그램을 마련했는가?",
+        "미참가학생 지도 교사를 지정했는가?"
+      ],
+      "evidence": ["미참가학생 지도 계획", "관련 내부결재 공문"],
+      "completionCriteria": "미참가학생 지도 계획과 지도 교사 지정을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 245: 미참가학생 지도 계획(별도 프로그램, 지도 교사 등)",
+      "monthReason": "체험학습 실시 시점마다 준비하는 업무이므로 특정 월을 지정하지 않음(수시)"
+    },
+    {
+      "templateTaskId": "fdt_005",
+      "sourceAuditItemId": "result",
+      "title": "만족도 조사 및 결과 공개",
+      "shortTitle": "만족도·결과 공개",
+      "description": "현장체험학습 종료 후 만족도 조사를 실시하고, 운영 결과 등을 14일 이내에 교육청 누리집에 공개했는지 확인한다.",
+      "taskType": "공개",
+      "cycle": "실시 후",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "현장체험학습 종료 후 만족도 조사를 실시했는가?",
+        "운영 결과 등을 사업 종료 후 14일 이내에 교육청 누리집에 공개했는가?"
+      ],
+      "evidence": ["만족도 조사 결과", "운영 결과 공개 자료(교육청 누리집)"],
+      "completionCriteria": "만족도 조사와 14일 이내 결과 공개를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 245·248: 만족도 조사 실시, 사업 종료 후 14일 이내 운영 결과 교육청 누리집 공개 (★①,②,③)",
+      "monthReason": "체험학습 실시 후 시한 내 공개하는 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}

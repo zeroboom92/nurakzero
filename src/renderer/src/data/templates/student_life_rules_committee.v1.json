@@ -1,0 +1,162 @@
+{
+  "templateId": "student_life_rules_committee",
+  "version": "1.3.0",
+  "schemaVersion": "1.0.0",
+  "title": "학생생활규정 및 학생생활교육위원회",
+  "displayTitle": "학생생활규정·생활교육위원회",
+  "description": "학생생활 제규정의 적법성과 학교운영위원회 심의, 규정개정심의위원회·학생생활교육위원회의 구성과 운영 절차를 점검 단위로 정리한다.",
+  "audit": {
+    "domain": "교무·학사",
+    "areaCode": "5",
+    "areaName": "학생생활교육",
+    "itemCode": "5-1",
+    "itemName": "학생생활규정 및 학생생활교육위원회"
+  },
+  "schoolLevels": ["초", "중", "고", "특"],
+  "aliases": ["학생생활규정", "생활규정", "학생생활교육위원회", "생활교육위원회", "선도위원회"],
+  "source": {
+    "documentTitle": "전북 학교자율형 종합감사 운영·점검 매뉴얼(교무·학사분야)",
+    "section": "5-1 학생생활규정 및 학생생활교육위원회",
+    "sourceType": "audit_manual_hwpx",
+    "note": "원본 표 212·215의 점검내용을 담당 교사용 점검 단위로 큐레이션했다. recommendedMonth는 원문 명시값이 아니라 누락 방지를 위한 운영 권장값이다."
+  },
+  "sourceAuditItems": [
+    { "id": "rules_legitimacy", "title": "적법한 학생생활 관련 규정 제·개정 및 운영", "sourceTables": [212] },
+    { "id": "council_review", "title": "학생생활 제규정의 학교운영위원회 심의", "sourceTables": [212] },
+    { "id": "amendment_committee", "title": "규정개정심의위원회 구성", "sourceTables": [212] },
+    { "id": "edu_committee", "title": "학생생활교육위원회 구성 및 운영", "sourceTables": [212, 215] }
+  ],
+  "legalReferences": [
+    "① 초·중등교육법 제8조, 제18조, 제32조",
+    "② 초·중등교육법 시행령 제9조, 제31조",
+    "③ 전북학생생활제규정 표준안",
+    "④ 전북특별자치도 학생인권 조례 제47조",
+    "⑤ 교원의 지위 향상 및 교육 활동 보호를 위한 특별법 제25조"
+  ],
+  "tasks": [
+    {
+      "templateTaskId": "slrc_001",
+      "sourceAuditItemId": "rules_legitimacy",
+      "title": "학생생활 제규정 적법성 점검",
+      "shortTitle": "제규정 적법성",
+      "description": "학교규칙에 근거한 학생생활제규정(학생생활규정·학생자치규정·기숙사학생생활규정 등)이 상위 법령과 학생인권 조례에 부합하게 제·개정되어 적법하게 운영되는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생생활제규정이 학교규칙에 근거해 마련되어 있는가?",
+        "상위 법령 및 학생인권 조례에 어긋나는 조항은 없는가?",
+        "학생생활규정·학생자치규정·기숙사학생생활규정 등이 현행화되어 있는가?"
+      ],
+      "evidence": ["학교규칙", "학생생활규정", "학생자치규정", "기숙사학생생활규정"],
+      "completionCriteria": "각 제규정을 상위 법령·조례와 대조해 적법성과 현행화를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 212: 적법한 학생생활 관련 규정 제·개정 및 운영 - 학교규칙에 근거한 학생생활제규정의 적법성 및 운영의 적절성 (★①,②,③,④)",
+      "monthReason": "학기 초 학생생활 규정을 정비·현행화하는 시기이므로 3월 권장"
+    },
+    {
+      "templateTaskId": "slrc_002",
+      "sourceAuditItemId": "council_review",
+      "title": "학생생활 제규정 학교운영위원회 심의",
+      "shortTitle": "학운위 심의",
+      "description": "학생생활 제규정의 제·개정이 학교운영위원회 심의를 거쳤는지 회의록으로 확인한다.",
+      "taskType": "심의",
+      "cycle": "연 1회 및 개정 시",
+      "recommendedMonth": 3,
+      "recommendedDay": 31,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생생활 제규정 제·개정안이 학교운영위원회 심의를 거쳤는가?",
+        "심의 회의록이 보관되어 있는가?"
+      ],
+      "evidence": ["학교운영위원회 회의록", "학생생활 제규정 제·개정 내부결재 공문"],
+      "completionCriteria": "제규정 제·개정의 학교운영위원회 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 212: 학생생활 제규정의 학교운영위원회 심의",
+      "monthReason": "규정 정비와 함께 학기 초 학교운영위원회 심의가 이뤄지므로 3월 권장"
+    },
+    {
+      "templateTaskId": "slrc_003",
+      "sourceAuditItemId": "amendment_committee",
+      "title": "규정개정심의위원회 구성·운영",
+      "shortTitle": "개정심의위원회",
+      "description": "학생생활 제규정 개정을 위한 규정개정심의위원회를 교직원·보호자·학생대표(인권 전문가 포함 가능)로 구성하고 절차에 따라 운영했는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "규정 개정 시",
+      "recommendedMonth": 9,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "규정개정심의위원회를 구성했는가?",
+        "위원을 교직원·보호자·학생대표로 구성했는가?",
+        "심의 절차와 회의록을 갖추고 있는가?"
+      ],
+      "evidence": ["규정개정심의위원회 구성 내부결재 공문", "규정개정심의위원회 회의록"],
+      "completionCriteria": "위원 구성과 심의 회의록을 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 212: 규정개정심의위원회 구성 - 위원은 교직원, 보호자, 학생대표로 구성(인권 관련 전문가 포함 가능)",
+      "monthReason": "다음 학년도 규정 개정을 준비하는 하반기 점검이 적절하므로 9월 권장"
+    },
+    {
+      "templateTaskId": "slrc_004",
+      "sourceAuditItemId": "edu_committee",
+      "title": "학생생활교육위원회 구성",
+      "shortTitle": "교육위원회 구성",
+      "description": "학생생활교육위원회를 규정에 따라 위원장 1명과 필요한 수의 위원으로, 학교 규모·상황을 고려해 구성했는지 확인한다.",
+      "taskType": "구성",
+      "cycle": "연 1회 및 위원 교체 시",
+      "recommendedMonth": 4,
+      "recommendedDay": 30,
+      "priority": "medium",
+      "riskLevel": "중",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "학생생활교육위원회를 규정에 따라 구성했는가?",
+        "위원장 1명과 필요한 수의 위원으로 구성했는가?",
+        "학교 규모·상황을 고려했는가?"
+      ],
+      "evidence": ["학생생활교육위원회 규정", "위원 구성 내부결재 공문"],
+      "completionCriteria": "위원회 규정과 위원 구성 내부결재를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 212: 학생생활교육위원회 규정에 따른 구성 - 위원장 1명과 필요한 수의 위원, 학교 규모·상황 고려",
+      "monthReason": "학기 초 위원 구성 시점에 점검하는 것이 적절하므로 4월 권장"
+    },
+    {
+      "templateTaskId": "slrc_005",
+      "sourceAuditItemId": "edu_committee",
+      "title": "학생생활교육위원회 운영 절차 준수",
+      "shortTitle": "운영 절차 준수",
+      "description": "학생 징계 등 심의 시 학생·보호자의 의견진술 기회를 부여하고 학습권을 보장하는 등 운영 절차를 규정대로 준수했는지 확인한다.",
+      "taskType": "점검",
+      "cycle": "사안 발생 시 수시",
+      "recommendedMonth": null,
+      "recommendedDay": null,
+      "priority": "high",
+      "riskLevel": "상",
+      "isCore": true,
+      "isAuditFocus": true,
+      "defaultStatus": "todo",
+      "checkQuestions": [
+        "징계 심의 시 학생(보호자)에게 의견진술 기회를 부여했는가?",
+        "학생의 학습권을 보장했는가?",
+        "심의·운영 절차를 회의록으로 남기고 있는가?"
+      ],
+      "evidence": ["학생생활교육위원회 회의록", "의견진술 기회 부여 관련 자료"],
+      "completionCriteria": "심의 회의록에서 의견진술 기회 부여와 학습권 보장 등 절차 준수를 확인하면 완료 처리한다.",
+      "sourceBasis": "원본 표 212·215: 학생생활교육위원회 운영 절차 준수 - 징계 시 학생(보호자) 의견진술 기회 부여, 학습권 보장 등 (★①,②,③)",
+      "monthReason": "징계 등 사안 발생 시 처리하는 상시 업무이므로 특정 월을 지정하지 않음(수시)"
+    }
+  ]
+}
