@@ -1,6 +1,6 @@
 {
   "name": "nurakzero",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "학교 감사 점검 위젯 - 이번 달 점검사항을 바탕화면 위젯으로 관리",
   "main": "./out/main/index.js",
   "author": "nurakzero",
@@ -12,10 +12,12 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "validate:templates": "node scripts/validate-templates.mjs",
     "dist": "electron-vite build && electron-builder --win",
-    "dist:dir": "electron-vite build && electron-builder --dir"
+    "dist:dir": "electron-vite build && electron-builder --dir",
+    "release": "electron-vite build && electron-builder --win --publish always"
   },
   "dependencies": {
     "date-fns": "^3.6.0",
+    "electron-updater": "^6.8.9",
     "zustand": "^4.5.5"
   },
   "devDependencies": {
@@ -55,6 +57,11 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "누락제로"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "zeroboom92",
+      "repo": "nurakzero"
     }
   }
 }

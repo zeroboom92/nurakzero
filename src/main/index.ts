@@ -1,5 +1,6 @@
 import { app, shell, BrowserWindow, ipcMain, screen } from 'electron'
 import { join } from 'path'
+import { autoUpdater } from 'electron-updater'
 import { Store, DbShape } from './store'
 
 let mainWindow: BrowserWindow | null = null
@@ -254,6 +255,18 @@ ipcMain.handle('app:setStartOnBoot', (_e, value: boolean) => {
 
 ipcMain.handle('app:getStartOnBoot', () => store.getSetting<boolean>('startOnBoot') ?? false)
 
+// ---------------- 자동 업데이트 ----------------
+
+// GitHub Release를 업데이트 서버로 사용(public 저장소라 인증 불필요).
+// 패키징된 앱에서만 동작: 시작 시 백그라운드로 새 버전을 조용히 내려받고,
+// 완료되면 OS 알림을 띄운 뒤 앱을 닫을 때 자동 설치한다.
+function initAutoUpdate(): void {
+  if (!app.isPackaged) return
+  autoUpdater.checkForUpdatesAndNotify().catch((err) => {
+    console.error('[autoUpdater] 업데이트 확인 실패:', err)
+  })
+}
+
 // ---------------- lifecycle ----------------
 
 app.whenReady().then(() => {
@@ -261,6 +274,7 @@ app.whenReady().then(() => {
   app.setLoginItemSettings({ openAtLogin: startOnBoot })
 
   createWindow()
+  initAutoUpdate()
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
