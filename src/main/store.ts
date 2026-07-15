@@ -99,6 +99,17 @@ export class Store {
     this.write()
   }
 
+  /**
+   * 모든 데이터를 초기 상태로 되돌린다(온보딩부터 다시 시작).
+   * EMPTY_DB를 재사용하지 않고 새 리터럴을 만든다 — 참조를 공유하면
+   * 이후 setSetting()이 EMPTY_DB.settings까지 오염시킬 수 있다.
+   */
+  reset(): DbShape {
+    this.cache = { categories: [], user_tasks: [], settings: {}, schemaVersion: 1 }
+    this.write()
+    return this.cache
+  }
+
   getSetting<T = unknown>(key: string): T | undefined {
     return this.cache.settings[key] as T | undefined
   }

@@ -18,6 +18,8 @@ const api = {
   minimize: () => ipcRenderer.invoke('window:minimize'),
   closeWindow: () => ipcRenderer.invoke('window:close'),
   setStartOnBoot: (value: boolean) => ipcRenderer.invoke('app:setStartOnBoot', value),
+  resetApp: () => ipcRenderer.invoke('db:reset'),
+  hardResetApp: () => ipcRenderer.invoke('app:hardReset'),
   getStartOnBoot: () => ipcRenderer.invoke('app:getStartOnBoot'),
   /** 다른 창에서 데이터가 바뀌면 호출된다. 해제 함수를 반환. */
   onDbChanged: (cb: () => void): (() => void) => {

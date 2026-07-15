@@ -1,5 +1,8 @@
 import { app, shell, BrowserWindow, ipcMain, screen } from 'electron'
-import { join } from 'path'
+import { dirname, join } from 'path'
+import { existsSync, writeFileSync } from 'fs'
+import { execFileSync } from 'child_process'
+import { tmpdir } from 'os'
 import { autoUpdater } from 'electron-updater'
 import { Store, DbShape } from './store'
 
@@ -254,6 +257,89 @@ ipcMain.handle('app:setStartOnBoot', (_e, value: boolean) => {
 })
 
 ipcMain.handle('app:getStartOnBoot', () => store.getSetting<boolean>('startOnBoot') ?? false)
+
+// ---------------- 초기화 / 완전 삭제 ----------------
+
+// 소프트 리셋: 데이터만 EMPTY_DB로 되돌리고 앱은 계속 실행(온보딩부터 다시 시작).
+ipcMain.handle('db:reset', () => {
+  const fresh = store.reset()
+  app.setLoginItemSettings({ openAtLogin: false })
+  BrowserWindow.getAllWindows().forEach((w) => {
+    if (!w.isDestroyed()) w.webContents.send('db:changed')
+  })
+  return fresh
+})
+
+/** electron-builder productName 기준 NSIS 언인스톨러 경로(고정 파일명). */
+function findUninstaller(): string | null {
+  const exeDir = dirname(app.getPath('exe'))
+  const candidate = join(exeDir, `Uninstall ${app.getName()}.exe`)
+  return existsSync(candidate) ? candidate : null
+}
+
+/**
+ * 완전 삭제: userData 전체 삭제 + 로그인 시작 해제 + (설치본이면) 언인스톨러 실행 후 종료.
+ *
+ * 실제 빌드로 검증하며 세 가지 함정을 확인하고 피한 결과다:
+ * 1) cmd.exe 배치파일(.cmd)에 경로를 써서 실행하면 한글 유저명(예: "자현") 경로가
+ *    시스템 OEM 코드페이지(CP949)로 잘못 해석되어 삭제가 조용히 실패한다.
+ * 2) `spawn(..., { detached: true }).unref()`로 띄운 정리 프로세스는, 앱(부모) 프로세스가
+ *    속한 Windows Job Object에 kill-on-close가 걸려 있으면 부모가 죽을 때 같이 죽는다
+ *    (실측 확인됨 — 파일이 하나도 안 지워지고 조용히 실패). Windows 작업 스케줄러
+ *    (schtasks)에 1회성 태스크로 등록해 실행하면 어떤 Job Object와도 무관하게
+ *    독립적으로 살아남는다.
+ * 3) `schtasks /tr` 값은 261자 제한이 있어 정리 커맨드를 통째로 인라인 문자열로
+ *    넘기면 조용히 실패한다(`실측 확인됨`). 대신 정리 로직을 짧은 경로의 .ps1
+ *    스크립트 파일로 써두고, `/tr`에는 그 파일을 실행하는 짧은 커맨드만 넘긴다.
+ *    스크립트 파일은 UTF-8 BOM으로 저장해 한글 경로를 Windows PowerShell 5.1도
+ *    정확히 읽게 한다(BOM 없으면 시스템 코드페이지로 오판독 — 1)과 같은 함정).
+ */
+ipcMain.handle('app:hardReset', () => {
+  app.setLoginItemSettings({ openAtLogin: false })
+
+  const userDataDir = app.getPath('userData')
+  const uninstaller = app.isPackaged ? findUninstaller() : null
+  const psQuote = (value: string) => `'${value.replace(/'/g, "''")}'`
+  const taskName = `NurakzeroHardReset_${Date.now()}`
+  const scriptPath = join(tmpdir(), `nurakzero-hard-reset-${Date.now()}.ps1`)
+
+  const scriptLines = [
+    'Start-Sleep -Seconds 2',
+    `Remove-Item -LiteralPath ${psQuote(userDataDir)} -Recurse -Force -ErrorAction SilentlyContinue`
+  ]
+  if (uninstaller) {
+    scriptLines.push(`Start-Process -FilePath ${psQuote(uninstaller)} -ArgumentList '/S' -Wait`)
+  }
+  scriptLines.push(`schtasks /delete /tn ${psQuote(taskName)} /f`)
+  scriptLines.push('Remove-Item -LiteralPath $PSCommandPath -Force -ErrorAction SilentlyContinue')
+
+  writeFileSync(scriptPath, '\uFEFF' + scriptLines.join('\r\n'), 'utf-8')
+
+  const taskCommand = `powershell.exe -NoProfile -NonInteractive -WindowStyle Hidden -File "${scriptPath}"`
+
+  try {
+    execFileSync('schtasks', [
+      '/create',
+      '/tn',
+      taskName,
+      '/tr',
+      taskCommand,
+      '/sc',
+      'once',
+      '/st',
+      '23:59',
+      '/f'
+    ])
+    execFileSync('schtasks', ['/run', '/tn', taskName])
+  } catch (err) {
+    console.error('[hardReset] 정리 작업 예약 실패:', err)
+  }
+
+  BrowserWindow.getAllWindows().forEach((w) => {
+    if (!w.isDestroyed()) w.destroy()
+  })
+  app.quit()
+})
 
 // ---------------- 자동 업데이트 ----------------
 
