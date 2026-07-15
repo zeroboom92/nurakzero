@@ -1,6 +1,6 @@
 {
   "name": "nurakzero",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "학교 감사 점검 위젯 - 이번 달 점검사항을 바탕화면 위젯으로 관리",
   "main": "./out/main/index.js",
   "author": "nurakzero",
